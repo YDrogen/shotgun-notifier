@@ -1,0 +1,224 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /en
+          - img [ref=e7]
+        - link "Search for an event, artist, organizer or city" [ref=e9] [cursor=pointer]:
+          - /url: /en/search
+          - img [ref=e10]
+          - searchbox "Search for an event, artist, organizer or city" [ref=e13]
+        - button "Explore" [ref=e14] [cursor=pointer]:
+          - text: Explore
+          - img [ref=e15]
+    - img
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]:
+              - heading "Grab your ticket, make memories" [level=1] [ref=e24]
+              - paragraph [ref=e25]: Download Shotgun to find the best parties in town.
+            - generic [ref=e26]:
+              - link "App Store" [ref=e27] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/shotgun/id760028892
+                - img [ref=e28]
+                - text: App Store
+              - link "Play Store" [ref=e30] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.shotguntheapp.android
+                - img [ref=e31]
+                - text: Play Store
+              - generic [ref=e33]:
+                - strong [ref=e34]: "4.9"
+                - generic [ref=e35]:
+                  - img [ref=e36]
+                  - img [ref=e38]
+                  - img [ref=e40]
+                  - img [ref=e42]
+                  - img [ref=e44]
+                - generic [ref=e46]: 50K+ App ratings
+          - generic [ref=e47]:
+            - img "Shotgun tickets screen" [ref=e48]
+            - img "Shotgun home screen" [ref=e49]
+            - img "Shotgun event page" [ref=e50]
+        - heading "Popular events in" [level=2] [ref=e53]: Popular events in
+      - list [ref=e76]:
+        - listitem [ref=e77]:
+          - link "Kettama Kettama Nü Androids" [ref=e78] [cursor=pointer]:
+            - /url: /en/artists/kettama
+            - heading "Kettama" [level=3] [ref=e79]
+            - img "Kettama"
+            - generic [ref=e80]:
+              - strong: Nü Androids
+        - listitem [ref=e81]:
+          - link "Sara Landry Sara Landry Brunch Electronik" [ref=e82] [cursor=pointer]:
+            - /url: /en/artists/sara-landry-dj
+            - heading "Sara Landry" [level=3] [ref=e83]
+            - img "Sara Landry"
+            - generic [ref=e84]:
+              - strong: Brunch Electronik
+        - listitem [ref=e85]:
+          - link "Black Coffee Black Coffee Fashion Week" [ref=e86] [cursor=pointer]:
+            - /url: /en/artists/realblackcoffee
+            - heading "Black Coffee" [level=3] [ref=e87]
+            - img "Black Coffee"
+            - generic [ref=e88]:
+              - strong: Fashion Week
+        - listitem [ref=e89]:
+          - link "Mind Against Mind Against Sunday Love" [ref=e90] [cursor=pointer]:
+            - /url: /en/artists/mindagainst
+            - heading "Mind Against" [level=3] [ref=e91]
+            - img "Mind Against"
+            - generic [ref=e92]:
+              - strong: Sunday Love
+        - listitem [ref=e93]:
+          - link "WhoMadeWho WhoMadeWho The Spotlight" [ref=e94] [cursor=pointer]:
+            - /url: /en/artists/whomadewho
+            - heading "WhoMadeWho" [level=3] [ref=e95]
+            - img "WhoMadeWho"
+            - generic [ref=e96]:
+              - strong: The Spotlight
+      - generic [ref=e97]:
+        - heading "Looking to go out? All the events you love are right there!" [level=2] [ref=e98]
+        - button "Get the Shotgun app" [ref=e99] [cursor=pointer]
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - heading "Discover the best events in town" [level=3] [ref=e102]
+            - img "Discover the best events in town" [ref=e103]
+          - generic [ref=e105]:
+            - heading "Resell your ticket if you can't make it" [level=3] [ref=e106]
+            - img "Resell your ticket if you can't make it" [ref=e107]
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - heading "Launching an event? your event deserves the best crowd!" [level=2] [ref=e111]
+          - paragraph [ref=e112]: Sell your tickets to the right person, at the right moment, with the right message, at the right price and on the right channel.
+          - link "List my event" [ref=e113] [cursor=pointer]:
+            - /url: https://pro.shotgun.live/?utm_source=b2cWebsiteOrganizersSection
+        - img "Smartboard" [ref=e115]
+    - navigation [ref=e117]:
+      - generic [ref=e118]:
+        - generic [ref=e120]:
+          - link "Home" [ref=e121] [cursor=pointer]:
+            - /url: /en
+            - img [ref=e122]
+          - link "List your event" [ref=e124] [cursor=pointer]:
+            - /url: https://smartboard.shotgun.live/?utm_source=b2c_website&utm_campaign=footer
+            - text: List your event
+            - img [ref=e125]
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - heading "About" [level=3] [ref=e129]
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - link "I'm an organizer" [ref=e132] [cursor=pointer]:
+                  - /url: https://pro.shotgun.live/
+              - listitem [ref=e133]:
+                - link "Shotgun for Artists" [ref=e134] [cursor=pointer]:
+                  - /url: https://artist.shotgun.live/
+              - listitem [ref=e135]:
+                - link "Press kit" [ref=e136] [cursor=pointer]:
+                  - /url: https://drive.google.com/drive/folders/1ulymAwQQBbB1pb_wdUbg0cv_ljxcptp4
+              - listitem [ref=e137]:
+                - link "We're hiring 🦄" [ref=e138] [cursor=pointer]:
+                  - /url: https://shotgun.teamtailor.com/
+              - listitem [ref=e139]:
+                - link "Artists" [ref=e140] [cursor=pointer]:
+                  - /url: /en/artists
+              - listitem [ref=e141]:
+                - link "Concerts" [ref=e142] [cursor=pointer]:
+                  - /url: /en/concerts
+          - generic [ref=e143]:
+            - heading "Popular cities" [level=3] [ref=e144]
+            - list [ref=e145]:
+              - listitem [ref=e146]:
+                - link "New York" [ref=e147] [cursor=pointer]:
+                  - /url: /en/cities/new-york
+              - listitem [ref=e148]:
+                - link "Washington DC" [ref=e149] [cursor=pointer]:
+                  - /url: /en/cities/washington-dc
+              - listitem [ref=e150]:
+                - link "Atlanta" [ref=e151] [cursor=pointer]:
+                  - /url: /en/cities/atlanta
+              - listitem [ref=e152]:
+                - link "Miami" [ref=e153] [cursor=pointer]:
+                  - /url: /en/cities/miami
+              - listitem [ref=e154]:
+                - link "Los Angeles" [ref=e155] [cursor=pointer]:
+                  - /url: /en/cities/los-angeles
+              - listitem [ref=e156]:
+                - link "View all" [ref=e157] [cursor=pointer]:
+                  - /url: /en/cities
+          - generic [ref=e158]:
+            - heading "Support" [level=3] [ref=e159]
+            - list [ref=e160]:
+              - listitem [ref=e161]:
+                - link "Help center" [ref=e162] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc?utm_source=shotgun-web
+              - listitem [ref=e163]:
+                - link "Contact us" [ref=e164] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc/requests/new?utm_source=shotgun-web
+              - listitem [ref=e165]:
+                - link "Report content" [ref=e166] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc/articles/28403164081682--Report-Illegal-Content
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - heading "Join the community" [level=3] [ref=e169]
+            - generic [ref=e170]:
+              - link "App Store" [ref=e171] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/shotgun/id760028892
+                - img [ref=e172]
+                - text: App Store
+              - link "Play Store" [ref=e174] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.shotguntheapp.android
+                - img [ref=e175]
+                - text: Play Store
+          - generic [ref=e177]:
+            - heading "We are social :)" [level=3] [ref=e178]
+            - generic [ref=e179]:
+              - link "TikTok" [ref=e180] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@shotgun.usa
+                - img [ref=e181]
+                - generic [ref=e183]: TikTok
+              - link "Instagram" [ref=e184] [cursor=pointer]:
+                - /url: https://www.instagram.com/shotgun.usa
+                - img [ref=e185]
+                - generic [ref=e187]: Instagram
+              - link "Spotify" [ref=e188] [cursor=pointer]:
+                - /url: https://open.spotify.com/user/bcyeq541kbgzp0yhd949c3yk9
+                - img [ref=e189]
+                - generic [ref=e191]: Spotify
+              - link "LinkedIn" [ref=e192] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/shotgun-
+                - img [ref=e193]
+                - generic [ref=e195]: LinkedIn
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - link "Terms and conditions" [ref=e199] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330476029330?utm_source=shotgun-web
+            - link "Privacy policy" [ref=e200] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330537455762?utm_source=shotgun-web
+            - link "Consumer information" [ref=e201] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330504165650?utm_source=shotgun-web
+            - generic [ref=e202] [cursor=pointer]: Cookies policy
+            - link "Partners" [ref=e203] [cursor=pointer]:
+              - /url: /en/partners-cookies
+          - generic [ref=e204]:
+            - generic [ref=e205]: English
+            - img [ref=e206]
+            - combobox "Select language" [ref=e208] [cursor=pointer]:
+              - option "English" [selected]
+              - option "Français"
+              - option "Español"
+              - option "Português (Brasil)"
+              - option "Português Europeu"
+        - generic [ref=e209]: © 2026 Shotgun SAS. All rights reserved.
+        - generic [ref=e210]:
+          - text: This site is protected by reCAPTCHA and the Google
+          - link "Privacy Policy" [ref=e211] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy
+          - text: and
+          - link "Terms of Service" [ref=e212] [cursor=pointer]:
+            - /url: https://policies.google.com/terms
+          - text: apply.
+  - region "Notifications alt+T"

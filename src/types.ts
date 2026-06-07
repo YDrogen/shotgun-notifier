@@ -48,3 +48,13 @@ export interface ScrapeResult {
   categories: TicketCategory[];
   raw?: unknown;
 }
+
+/**
+ * Represents a change in event state
+ */
+export interface StateChange {
+  event: EventConfig;
+  previousState: EventState;
+  newState: EventState;
+  categories: TicketCategory[];
+}

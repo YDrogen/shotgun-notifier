@@ -1,0 +1,436 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /en
+          - img [ref=e7]
+        - link "Search for an event, artist, organizer or city" [ref=e9] [cursor=pointer]:
+          - /url: /en/search
+          - img [ref=e10]
+          - searchbox "Search for an event, artist, organizer or city" [ref=e13]
+        - button "Explore" [ref=e14] [cursor=pointer]:
+          - text: Explore
+          - img [ref=e15]
+    - generic [ref=e19]:
+      - navigation "breadcrumb" [ref=e20]:
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - link "Home" [ref=e23] [cursor=pointer]:
+              - /url: /en
+          - listitem [ref=e24]:
+            - img [ref=e25]
+          - listitem [ref=e27]:
+            - link "Events in New York" [ref=e28] [cursor=pointer]:
+              - /url: /en/cities/new-york
+          - listitem [ref=e29]:
+            - img [ref=e30]
+          - listitem [ref=e32]:
+            - link "Opa! Festa Junina" [disabled] [ref=e33]
+      - generic [ref=e34]:
+        - img "Opa! Festa Junina Cover" [ref=e36]
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - heading "Opa! Festa Junina" [level=1] [ref=e39]
+            - generic [ref=e40]:
+              - text: By
+              - link "House Of Yes" [ref=e41] [cursor=pointer]:
+                - /url: /en/venues/house-of-yes
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - img [ref=e44]
+              - generic [ref=e47]: Sun 7 Jun from 3:00 PM to 11:00 PM
+            - generic [ref=e48]:
+              - img [ref=e49]
+              - generic [ref=e51]: House of Yes
+            - generic [ref=e52]:
+              - img [ref=e53]
+              - generic [ref=e55]: 2 Wyckoff Ave, Brooklyn, NY 11237, USA
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - button "No tickets available" [disabled]
+              - button "Interested" [ref=e58] [cursor=pointer]:
+                - img [ref=e59]
+                - text: Interested
+            - generic [ref=e62]:
+              - strong [ref=e63]: "175"
+              - text: are interested
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - heading "Tickets" [level=2] [ref=e68]
+            - button "Access code" [ref=e69] [cursor=pointer]:
+              - generic [ref=e70]:
+                - img [ref=e71]
+                - text: Access code
+          - tabpanel [ref=e74]:
+            - generic [ref=e75]:
+              - generic [ref=e77]:
+                - heading "Early Bird" [level=3] [ref=e79]
+                - generic [ref=e80]:
+                  - generic [ref=e81]: $26.25
+                  - generic [ref=e82]: Sold out
+              - generic [ref=e84]:
+                - heading "First Release" [level=3] [ref=e86]
+                - generic [ref=e87]:
+                  - generic [ref=e88]: $31.50
+                  - generic [ref=e89]: Sold out
+              - generic [ref=e91]:
+                - heading "Second Release" [level=3] [ref=e93]
+                - generic [ref=e94]:
+                  - generic [ref=e95]: $36.75
+                  - generic [ref=e96]: Sold out
+              - generic [ref=e98]:
+                - heading "Last Chance!" [level=3] [ref=e100]
+                - generic [ref=e101]:
+                  - generic [ref=e102]: $42.00
+                  - generic [ref=e103]: Sold out
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e106]: Description
+            - generic [ref=e108]:
+              - paragraph [ref=e109]:
+                - strong [ref=e111]: OPA! Festa Junina 2026
+              - paragraph [ref=e112]:
+                - strong [ref=e114]:
+                  - emphasis [ref=e115]: A full-day Brazilian cultural extravaganza at House of Yes
+              - paragraph [ref=e116]:
+                - generic [ref=e117]:
+                  - strong [ref=e118]: You heard about Carnaval, but did you know that every June, Brazil transforms into a month-long celebration?
+                  - text: "Communities come together to celebrate one of the country's most beloved and lively traditions:"
+                  - strong [ref=e119]: Festa Junina
+                  - text: "(June Party)—a harvest festival woven from Indigenous, African, and Portuguese roots, alive in every corner of Brazil every June. Centuries of joy, community, and folklore collide in the most colorful way possible. Think: accordion music drifting through a lantern-lit space, the smell of traditional food, people dancing forró, plaid and ribbon costumes, and the kind of warmth you feel when a whole room decides, together, to celebrate. So once again, the Brazilian theater company"
+                - link "Group Dot BR" [ref=e120] [cursor=pointer]:
+                  - /url: http://www.instagram.com/groupdotbr
+                  - generic [ref=e121]: Group Dot BR
+                - generic [ref=e122]:
+                  - text: brings
+                  - emphasis [ref=e123]: Festa Junina
+                  - text: to House of Yes!
+              - paragraph [ref=e124]: The event is family-friendly from 3 to 6 PM — children under 12 enter free when accompanied by a legal guardian. The event is 21+ after 6 PM.
+              - paragraph [ref=e125]
+              - paragraph [ref=e126]:
+                - strong [ref=e128]: WHAT'S HAPPENING
+              - paragraph [ref=e129]:
+                - text: "🎧 DJs:"
+                - link "Greg Caz" [ref=e130] [cursor=pointer]:
+                  - /url: https://www.instagram.com/the_real_greg_caz/
+                  - strong [ref=e132]: Greg Caz
+                - strong [ref=e134]: ","
+                - link "Lara Gerin" [ref=e135] [cursor=pointer]:
+                  - /url: https://www.instagram.com/lara_gerin/
+                  - strong [ref=e137]: Lara Gerin
+                - generic [ref=e138]:
+                  - strong [ref=e139]
+                  - text: and
+                - link "Tietta" [ref=e140] [cursor=pointer]:
+                  - /url: https://www.instagram.com/tietta021
+                  - strong [ref=e142]: Tietta
+                - text: on the decks to make sure your body will move to the grooves
+              - paragraph [ref=e143]:
+                - generic [ref=e144]:
+                  - text: "🪗 Live music:"
+                  - strong [ref=e145]: Live forró with
+                - link "Guilherme Monteiro" [ref=e146] [cursor=pointer]:
+                  - /url: https://www.instagram.com/guilmonteiro/
+                  - strong [ref=e148]: Guilherme Monteiro
+                - strong [ref=e150]: from
+                - link "Forró in the Dark" [ref=e151] [cursor=pointer]:
+                  - /url: https://www.instagram.com/forrointhedarkoficial/
+                  - strong [ref=e153]: Forró in the Dark
+                - generic [ref=e154]:
+                  - strong [ref=e155]: and special guests
+                  - text: to be announced +
+                - link "Mambembé" [ref=e156] [cursor=pointer]:
+                  - /url: https://www.instagram.com/mambembenewyork/
+                  - strong [ref=e158]: Mambembé
+                - strong [ref=e160]: "&"
+                - link "Marcos Costa" [ref=e161] [cursor=pointer]:
+                  - /url: https://www.instagram.com/marcoscostacosta/
+                  - strong [ref=e163]: Marcos Costa
+                - generic [ref=e164]:
+                  - strong [ref=e165]
+                  - text: bringing the delicious rhythms of Bahia
+              - paragraph [ref=e166]:
+                - generic [ref=e167]:
+                  - text: 🎭 Theatrical performances by
+                  - strong [ref=e168]: Group Dot BR with
+                - link "Andressa Furletti" [ref=e169] [cursor=pointer]:
+                  - /url: https://www.instagram.com/andressafurletti/
+                  - strong [ref=e171]: Andressa Furletti
+                - strong [ref=e173]: ","
+                - link "Dayane Carvalho" [ref=e174] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dayaneccarvalho/
+                  - strong [ref=e176]: Dayane Carvalho
+                - strong [ref=e178]: ","
+                - link "Douglas Tholedo" [ref=e179] [cursor=pointer]:
+                  - /url: https://www.instagram.com/douglastholedo/
+                  - strong [ref=e181]: Douglas Tholedo
+                - strong [ref=e183]: ","
+                - link "Fabiana Mattedi" [ref=e184] [cursor=pointer]:
+                  - /url: https://www.instagram.com/mattedifabiana/
+                  - strong [ref=e186]: Fabiana Mattedi
+                - strong [ref=e188]: ","
+                - link "Marcio Fein" [ref=e189] [cursor=pointer]:
+                  - /url: https://www.instagram.com/marciofein/
+                  - strong [ref=e191]: Marcio Fein
+                - strong [ref=e193]: and
+                - link "Tatiana Birenbaum" [ref=e194] [cursor=pointer]:
+                  - /url: https://www.instagram.com/tatiana.birenbaum/
+                  - strong [ref=e196]: Tatiana Birenbaum
+              - paragraph [ref=e197]:
+                - generic [ref=e198]:
+                  - text: 💃
+                  - strong [ref=e199]: Forró crash course
+                  - text: — never danced forró? No problem!
+                - link "Sabrina Evangelista" [ref=e200] [cursor=pointer]:
+                  - /url: https://www.instagram.com/iamsabrinaevangelista/
+                  - strong [ref=e202]: Sabrina Evangelista
+                - text: will lead a crash course so you can get the basic steps and join the fun.
+              - paragraph [ref=e203]:
+                - generic [ref=e204]:
+                  - text: 🎤
+                  - strong [ref=e205]: Performance by
+                - link "Pietra Parker" [ref=e206] [cursor=pointer]:
+                  - /url: https://www.instagram.com/pietraparker/
+                  - strong [ref=e208]: Pietra Parker
+                - text: — Brazilian drag queen extraordinaire
+              - paragraph [ref=e209]:
+                - generic [ref=e210]:
+                  - text: 🕺
+                  - strong [ref=e211]: Quadrilha
+                  - text: — Brazil's beloved group dance, open to all led by
+                - link "Sabrina Evangelista" [ref=e212] [cursor=pointer]:
+                  - /url: https://www.instagram.com/iamsabrinaevangelista/
+                  - strong [ref=e214]: Sabrina Evangelista
+                - text: and Pietra Parker.
+              - paragraph [ref=e215]:
+                - generic [ref=e216]:
+                  - text: 👑
+                  - strong [ref=e217]: King and Queen of the Quadrilha -
+                - link "Pietra Parker" [ref=e218] [cursor=pointer]:
+                  - /url: https://www.instagram.com/pietraparker/
+                  - strong [ref=e220]: Pietra Parker
+                - text: will host a competition — bring your best moves and your crown ambitions!
+              - paragraph [ref=e221]:
+                - generic [ref=e222]:
+                  - text: 💌
+                  - strong [ref=e223]: Correio Elegante
+                  - text: — the Festa Junina tradition of sending a little note to someone you fancy, admire, or just want to make smile. Anonymous or signed — that part is up to you.
+              - paragraph [ref=e224]:
+                - generic [ref=e225]:
+                  - text: 🔮
+                  - strong [ref=e226]: Love Simpatias
+                  - text: "— a beloved Brazilian folk tradition: small rituals and charms believed to attract love, luck, and good fortune. In Brazil, Festa Junina is the most magical time of year to try one."
+              - paragraph [ref=e227]:
+                - generic [ref=e228]:
+                  - text: 🎮
+                  - strong [ref=e229]: Festa Junina games
+                  - text: — classic Brazilian party games for all ages from 3-6 PM
+              - paragraph [ref=e230]:
+                - generic [ref=e231]:
+                  - text: 🖼️
+                  - strong [ref=e232]: "Exhibition: \"Acre in Celebration: Nature, Stories and New Futures\""
+                  - text: and a workshop,
+                  - strong [ref=e233]: "\"Protecting Acre's Wildlife\""
+                  - text: for kids and teens by
+                - link "Duda Mendes" [ref=e234] [cursor=pointer]:
+                  - /url: https://www.instagram.com/fotos_duda
+                  - strong [ref=e236]: Duda Mendes
+                - text: "- MoMA Teens-in-Residence & NYCLU Teen Activist. Curated by"
+                - link "Angelica Walker Projects" [ref=e237] [cursor=pointer]:
+                  - /url: https://www.instagram.com/angelicawalkerprojects/
+                  - generic [ref=e238]: Angelica Walker Projects
+              - paragraph [ref=e239]
+              - paragraph [ref=e240]:
+                - text: 🌽 Brazilian food by
+                - link "Andrea's Brazilian Homemade Goods" [ref=e241] [cursor=pointer]:
+                  - /url: https://www.instagram.com/andrea_homemade
+                  - strong [ref=e243]: Andrea's Brazilian Homemade Goods
+                - text: ","
+                - link "Mariana Tamiozzy Vegan Chef" [ref=e244] [cursor=pointer]:
+                  - /url: https://www.instagram.com/marianatamiozzy
+                  - strong [ref=e246]: Mariana Tamiozzy Vegan Chef
+                - text: ", and"
+                - link "Queijo Mel" [ref=e247] [cursor=pointer]:
+                  - /url: https://www.instagram.com/queijomelnyc/
+                  - strong [ref=e249]: Queijo Mel
+              - paragraph [ref=e250]:
+                - generic [ref=e251]:
+                  - text: 💄 C
+                  - strong [ref=e252]: ostume & makeup station
+                  - text: with free makeup by
+                - link "Luisa Galatti" [ref=e253] [cursor=pointer]:
+                  - /url: https://www.instagram.com/luisagalatti/
+                  - strong [ref=e255]: Luisa Galatti
+                - strong [ref=e257]
+                - text: from 3 to 6 PM
+              - paragraph [ref=e258]:
+                - strong [ref=e259]: ◆ INFO & FAQ ◆
+              - paragraph [ref=e260]:
+                - text: No Re-Entry | No Refunds | More questions? Head to
+                - link "houseofyes.org/FAQ" [ref=e261] [cursor=pointer]:
+                  - /url: http://houseofyes.org/FAQ
+              - paragraph [ref=e262]: "#DANCE #PARTY #JUSTANNOUNCED @HOY #BURN #thisweekend"
+          - generic [ref=e263]:
+            - generic [ref=e264]: Organized By
+            - generic [ref=e265]:
+              - link "House Of Yes House Of Yes 21,707 followers 53 events" [ref=e266] [cursor=pointer]:
+                - /url: /en/venues/house-of-yes
+                - img "House Of Yes" [ref=e268]
+                - generic [ref=e269]:
+                  - generic [ref=e270]: House Of Yes
+                  - generic [ref=e271]: 21,707 followers
+                  - generic [ref=e272]: 53 events
+              - button "Follow" [ref=e273] [cursor=pointer]:
+                - button "Follow" [ref=e274]
+            - generic [ref=e275]:
+              - link "Group Dot BR - Brazilian Theater Company Group Dot BR - Brazilian Theater Company 39 followers 1 event" [ref=e276] [cursor=pointer]:
+                - /url: /en/venues/group-dot-br-brazilian-theater-company
+                - img "Group Dot BR - Brazilian Theater Company" [ref=e278]
+                - generic [ref=e279]:
+                  - generic [ref=e280]: Group Dot BR - Brazilian Theater Company
+                  - generic [ref=e281]: 39 followers
+                  - generic [ref=e282]: 1 event
+              - button "Follow" [ref=e283] [cursor=pointer]:
+                - button "Follow" [ref=e284]
+          - generic [ref=e285]:
+            - generic [ref=e286]: Location
+            - generic [ref=e287]:
+              - img [ref=e288]
+              - link "House of Yes" [ref=e290] [cursor=pointer]:
+                - /url: https://www.google.com/maps/search/House%20of%20Yes%2C%202%20Wyckoff%20Ave%2C%20Brooklyn%2C%20NY%2011237%2C%20USA/@40.7068,-73.9236,17z
+            - generic [ref=e291]:
+              - img [ref=e292]
+              - link "2 Wyckoff Ave, Brooklyn, NY 11237, USA" [ref=e294] [cursor=pointer]:
+                - /url: https://www.google.com/maps/search/House%20of%20Yes%2C%202%20Wyckoff%20Ave%2C%20Brooklyn%2C%20NY%2011237%2C%20USA/@40.7068,-73.9236,17z
+            - link "Google map" [ref=e295] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/House%20of%20Yes%2C%202%20Wyckoff%20Ave%2C%20Brooklyn%2C%20NY%2011237%2C%20USA/@40.7068,-73.9236,17z
+              - img "Google map" [ref=e296]
+    - navigation [ref=e297]:
+      - generic [ref=e298]:
+        - generic [ref=e300]:
+          - link "Home" [ref=e301] [cursor=pointer]:
+            - /url: /en
+            - img [ref=e302]
+          - link "List your event" [ref=e304] [cursor=pointer]:
+            - /url: https://smartboard.shotgun.live/?utm_source=b2c_website&utm_campaign=footer
+            - text: List your event
+            - img [ref=e305]
+        - generic [ref=e307]:
+          - generic [ref=e308]:
+            - heading "About" [level=3] [ref=e309]
+            - list [ref=e310]:
+              - listitem [ref=e311]:
+                - link "I'm an organizer" [ref=e312] [cursor=pointer]:
+                  - /url: https://pro.shotgun.live/
+              - listitem [ref=e313]:
+                - link "Shotgun for Artists" [ref=e314] [cursor=pointer]:
+                  - /url: https://artist.shotgun.live/
+              - listitem [ref=e315]:
+                - link "Press kit" [ref=e316] [cursor=pointer]:
+                  - /url: https://drive.google.com/drive/folders/1ulymAwQQBbB1pb_wdUbg0cv_ljxcptp4
+              - listitem [ref=e317]:
+                - link "We're hiring 🦄" [ref=e318] [cursor=pointer]:
+                  - /url: https://shotgun.teamtailor.com/
+              - listitem [ref=e319]:
+                - link "Artists" [ref=e320] [cursor=pointer]:
+                  - /url: /en/artists
+              - listitem [ref=e321]:
+                - link "Concerts" [ref=e322] [cursor=pointer]:
+                  - /url: /en/concerts
+          - generic [ref=e323]:
+            - heading "Popular cities" [level=3] [ref=e324]
+            - list [ref=e325]:
+              - listitem [ref=e326]:
+                - link "New York" [ref=e327] [cursor=pointer]:
+                  - /url: /en/cities/new-york
+              - listitem [ref=e328]:
+                - link "Washington DC" [ref=e329] [cursor=pointer]:
+                  - /url: /en/cities/washington-dc
+              - listitem [ref=e330]:
+                - link "Atlanta" [ref=e331] [cursor=pointer]:
+                  - /url: /en/cities/atlanta
+              - listitem [ref=e332]:
+                - link "Miami" [ref=e333] [cursor=pointer]:
+                  - /url: /en/cities/miami
+              - listitem [ref=e334]:
+                - link "Los Angeles" [ref=e335] [cursor=pointer]:
+                  - /url: /en/cities/los-angeles
+              - listitem [ref=e336]:
+                - link "View all" [ref=e337] [cursor=pointer]:
+                  - /url: /en/cities
+          - generic [ref=e338]:
+            - heading "Support" [level=3] [ref=e339]
+            - list [ref=e340]:
+              - listitem [ref=e341]:
+                - link "Help center" [ref=e342] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc?utm_source=shotgun-web
+              - listitem [ref=e343]:
+                - link "Contact us" [ref=e344] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc/requests/new?utm_source=shotgun-web
+              - listitem [ref=e345]:
+                - link "Report content" [ref=e346] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc/articles/28403164081682--Report-Illegal-Content
+        - generic [ref=e347]:
+          - generic [ref=e348]:
+            - heading "Join the community" [level=3] [ref=e349]
+            - generic [ref=e350]:
+              - link "App Store" [ref=e351] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/shotgun/id760028892
+                - img [ref=e352]
+                - text: App Store
+              - link "Play Store" [ref=e354] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.shotguntheapp.android
+                - img [ref=e355]
+                - text: Play Store
+          - generic [ref=e357]:
+            - heading "We are social :)" [level=3] [ref=e358]
+            - generic [ref=e359]:
+              - link "TikTok" [ref=e360] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@shotgun.usa
+                - img [ref=e361]
+                - generic [ref=e363]: TikTok
+              - link "Instagram" [ref=e364] [cursor=pointer]:
+                - /url: https://www.instagram.com/shotgun.usa
+                - img [ref=e365]
+                - generic [ref=e367]: Instagram
+              - link "Spotify" [ref=e368] [cursor=pointer]:
+                - /url: https://open.spotify.com/user/bcyeq541kbgzp0yhd949c3yk9
+                - img [ref=e369]
+                - generic [ref=e371]: Spotify
+              - link "LinkedIn" [ref=e372] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/shotgun-
+                - img [ref=e373]
+                - generic [ref=e375]: LinkedIn
+        - generic [ref=e377]:
+          - generic [ref=e378]:
+            - link "Terms and conditions" [ref=e379] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330476029330?utm_source=shotgun-web
+            - link "Privacy policy" [ref=e380] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330537455762?utm_source=shotgun-web
+            - link "Consumer information" [ref=e381] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330504165650?utm_source=shotgun-web
+            - generic [ref=e382] [cursor=pointer]: Cookies policy
+            - link "Partners" [ref=e383] [cursor=pointer]:
+              - /url: /en/partners-cookies
+          - generic [ref=e384]:
+            - generic [ref=e385]: English
+            - img [ref=e386]
+            - combobox "Select language" [ref=e388] [cursor=pointer]:
+              - option "English" [selected]
+              - option "Français"
+              - option "Español"
+              - option "Português (Brasil)"
+              - option "Português Europeu"
+        - generic [ref=e389]: © 2026 Shotgun SAS. All rights reserved.
+        - generic [ref=e390]:
+          - text: This site is protected by reCAPTCHA and the Google
+          - link "Privacy Policy" [ref=e391] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy
+          - text: and
+          - link "Terms of Service" [ref=e392] [cursor=pointer]:
+            - /url: https://policies.google.com/terms
+          - text: apply.
+  - region "Notifications alt+T"
+  - alert [ref=e393]

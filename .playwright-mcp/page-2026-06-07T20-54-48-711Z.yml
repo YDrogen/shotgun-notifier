@@ -1,0 +1,417 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /en
+          - img [ref=e7]
+        - link "Search for an event, artist, organizer or city" [ref=e9] [cursor=pointer]:
+          - /url: /en/search
+          - img [ref=e10]
+          - searchbox "Search for an event, artist, organizer or city" [ref=e13]
+        - button "Explore" [ref=e14] [cursor=pointer]:
+          - text: Explore
+          - img [ref=e15]
+    - img
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - navigation "breadcrumb" [ref=e22]:
+            - list [ref=e23]:
+              - listitem [ref=e24]:
+                - link "Home" [ref=e25] [cursor=pointer]:
+                  - /url: /en
+              - listitem [ref=e26]:
+                - img [ref=e27]
+              - listitem [ref=e29]:
+                - link "Cities" [ref=e30] [cursor=pointer]:
+                  - /url: /en/cities
+              - listitem [ref=e31]:
+                - img [ref=e32]
+              - listitem [ref=e34]:
+                - link "New York" [disabled] [ref=e35]
+          - generic [ref=e36]:
+            - heading "Events in New York" [level=1] [ref=e37]
+            - generic [ref=e38]:
+              - generic [ref=e39]:
+                - generic [ref=e40]: 83°F
+                - img [ref=e41]
+              - text: 163 upcoming events
+              - link "Submit an event" [ref=e44] [cursor=pointer]:
+                - /url: https://smartboard.shotgun.live/?utm_source=b2c_website&utm_campaign=city&utm_term=new-york
+                - text: Submit an event
+                - img [ref=e45]
+          - generic [ref=e47]:
+            - button "new-york" [ref=e48] [cursor=pointer]:
+              - generic [ref=e49]: new-york
+              - img [ref=e50]
+            - button "By music" [ref=e52] [cursor=pointer]:
+              - generic [ref=e53]: By music
+              - img [ref=e54]
+            - button "By date" [ref=e56] [cursor=pointer]
+        - generic [ref=e57]:
+          - heading "Sun 7 Jun" [level=2] [ref=e58]
+          - link "Kyle Cook @ The Summer Club Kyle Cook @ The Summer Club The Summer Club Sun, Jun 7 | 2:00 PM $44.99 Electronica House Edm" [ref=e59] [cursor=pointer]:
+            - /url: /en/events/kyle-cook-the-summer-club
+            - generic [ref=e60]:
+              - img "Kyle Cook @ The Summer Club" [ref=e62]
+              - generic [ref=e63]:
+                - paragraph [ref=e65]: Kyle Cook @ The Summer Club
+                - generic [ref=e66]:
+                  - generic [ref=e67]: The Summer Club
+                  - generic [ref=e68]:
+                    - generic [ref=e69]:
+                      - time [ref=e70]: Sun, Jun 7
+                      - generic [ref=e71]:
+                        - generic [ref=e72]: "|"
+                        - time [ref=e73]: 2:00 PM
+                    - generic [ref=e74]: $44.99
+                - generic [ref=e75]:
+                  - generic [ref=e76]: Electronica
+                  - generic [ref=e77]: House
+                  - generic [ref=e78]: Edm
+          - link "Opa! Festa Junina Opa! Festa Junina House of Yes Sun, Jun 7 | 3:00 PM Sold out" [ref=e79] [cursor=pointer]:
+            - /url: /en/events/opa-festa-junina-june-7-2026
+            - generic [ref=e80]:
+              - img "Opa! Festa Junina" [ref=e82]
+              - generic [ref=e83]:
+                - paragraph [ref=e85]: Opa! Festa Junina
+                - generic [ref=e86]:
+                  - generic [ref=e87]: House of Yes
+                  - generic [ref=e88]:
+                    - generic [ref=e89]:
+                      - time [ref=e90]: Sun, Jun 7
+                      - generic [ref=e91]:
+                        - generic [ref=e92]: "|"
+                        - time [ref=e93]: 3:00 PM
+                    - generic [ref=e95]: Sold out
+          - 'link "Pride: Ron Like Hell B2b Clarisa Kimskii, Leonce, + More Pride: Ron Like Hell B2b Clarisa Kimskii, Leonce, + More Signal Sun, Jun 7 | 5:00 PM $28.13 Techno House" [ref=e96] [cursor=pointer]':
+            - /url: /en/events/pride-ron-like-hell-b-2-b-clarisa-kimskii-leonce-more
+            - generic [ref=e97]:
+              - 'img "Pride: Ron Like Hell B2b Clarisa Kimskii, Leonce, + More" [ref=e99]'
+              - generic [ref=e100]:
+                - paragraph [ref=e102]: "Pride: Ron Like Hell B2b Clarisa Kimskii, Leonce, + More"
+                - generic [ref=e103]:
+                  - generic [ref=e104]: Signal
+                  - generic [ref=e105]:
+                    - generic [ref=e106]:
+                      - time [ref=e107]: Sun, Jun 7
+                      - generic [ref=e108]:
+                        - generic [ref=e109]: "|"
+                        - time [ref=e110]: 5:00 PM
+                    - generic [ref=e111]: $28.13
+                - generic [ref=e112]:
+                  - generic [ref=e113]: Techno
+                  - generic [ref=e114]: House
+          - link "Chaske 24 Hour Dj Marathon For Charity Chaske 24 Hour Dj Marathon For Charity Brooklyn Jun 6 – 7 Free House Minimal House Deep House" [ref=e115] [cursor=pointer]:
+            - /url: /en/events/chaske-24-hour-dj-marathon-for-charity
+            - generic [ref=e116]:
+              - img "Chaske 24 Hour Dj Marathon For Charity" [ref=e118]
+              - generic [ref=e119]:
+                - paragraph [ref=e121]: Chaske 24 Hour Dj Marathon For Charity
+                - generic [ref=e122]:
+                  - generic [ref=e123]: Brooklyn
+                  - generic [ref=e124]:
+                    - generic [ref=e125]:
+                      - time [ref=e126]: Jun
+                      - time [ref=e127]: "6"
+                      - generic [ref=e128]: –
+                      - time [ref=e129]: "7"
+                    - generic [ref=e130]: Free
+                - generic [ref=e131]:
+                  - generic [ref=e132]: House
+                  - generic [ref=e133]: Minimal House
+                  - generic [ref=e134]: Deep House
+          - link "Shore Sessions - House Music Summer Day Party Rooftop Series Shore Sessions - House Music Summer Day Party Rooftop Series New York Sun, Jun 7 | 3:00 PM $22.50 House" [ref=e135] [cursor=pointer]:
+            - /url: /en/events/shore-sessions-house-music-summer-rooftop-series
+            - generic [ref=e136]:
+              - img "Shore Sessions - House Music Summer Day Party Rooftop Series" [ref=e138]
+              - generic [ref=e139]:
+                - paragraph [ref=e141]: Shore Sessions - House Music Summer Day Party Rooftop Series
+                - generic [ref=e142]:
+                  - generic [ref=e143]: New York
+                  - generic [ref=e144]:
+                    - generic [ref=e145]:
+                      - time [ref=e146]: Sun, Jun 7
+                      - generic [ref=e147]:
+                        - generic [ref=e148]: "|"
+                        - time [ref=e149]: 3:00 PM
+                    - generic [ref=e150]: $22.50
+                - generic [ref=e152]: House
+          - link "Super Gay Sunday Super Gay Sunday Moondog HiFi Sun, Jun 7 | 4:00 PM Free" [ref=e153] [cursor=pointer]:
+            - /url: /en/events/super-gay-sunday-6
+            - generic [ref=e154]:
+              - img "Super Gay Sunday" [ref=e156]
+              - generic [ref=e157]:
+                - paragraph [ref=e159]: Super Gay Sunday
+                - generic [ref=e160]:
+                  - generic [ref=e161]: Moondog HiFi
+                  - generic [ref=e162]:
+                    - generic [ref=e163]:
+                      - time [ref=e164]: Sun, Jun 7
+                      - generic [ref=e165]:
+                        - generic [ref=e166]: "|"
+                        - time [ref=e167]: 4:00 PM
+                    - generic [ref=e168]: Free
+          - link "Felix Lücke / Luciio Felix Lücke / Luciio MAD RADIO NYC Sun, Jun 7 | 6:00 PM Free" [ref=e169] [cursor=pointer]:
+            - /url: /en/events/madradionyc0607
+            - generic [ref=e170]:
+              - img "Felix Lücke / Luciio" [ref=e172]
+              - generic [ref=e173]:
+                - paragraph [ref=e175]: Felix Lücke / Luciio
+                - generic [ref=e176]:
+                  - generic [ref=e177]: MAD RADIO NYC
+                  - generic [ref=e178]:
+                    - generic [ref=e179]:
+                      - time [ref=e180]: Sun, Jun 7
+                      - generic [ref=e181]:
+                        - generic [ref=e182]: "|"
+                        - time [ref=e183]: 6:00 PM
+                    - generic [ref=e184]: Free
+          - link "Dj Niko Soul Night Sunday Dj Niko Soul Night Sunday New York, United States 🇺🇸 Sun, Jun 7 | 8:00 PM $45.40 R&B Soul" [ref=e185] [cursor=pointer]:
+            - /url: /en/events/dj-niko-soul-night-sunday
+            - generic [ref=e186]:
+              - img "Dj Niko Soul Night Sunday" [ref=e188]
+              - generic [ref=e189]:
+                - paragraph [ref=e191]: Dj Niko Soul Night Sunday
+                - generic [ref=e192]:
+                  - generic [ref=e193]: New York, United States 🇺🇸
+                  - generic [ref=e194]:
+                    - generic [ref=e195]:
+                      - time [ref=e196]: Sun, Jun 7
+                      - generic [ref=e197]:
+                        - generic [ref=e198]: "|"
+                        - time [ref=e199]: 8:00 PM
+                    - generic [ref=e200]: $45.40
+                - generic [ref=e201]:
+                  - generic [ref=e202]: R&B
+                  - generic [ref=e203]: Soul
+          - link "Max Kulchinsky Max Kulchinsky Moondog HiFi Sun, Jun 7 | 9:00 PM Free" [ref=e204] [cursor=pointer]:
+            - /url: /en/events/max-kulchinsky-moondog-2
+            - generic [ref=e205]:
+              - img "Max Kulchinsky" [ref=e207]
+              - generic [ref=e208]:
+                - paragraph [ref=e210]: Max Kulchinsky
+                - generic [ref=e211]:
+                  - generic [ref=e212]: Moondog HiFi
+                  - generic [ref=e213]:
+                    - generic [ref=e214]:
+                      - time [ref=e215]: Sun, Jun 7
+                      - generic [ref=e216]:
+                        - generic [ref=e217]: "|"
+                        - time [ref=e218]: 9:00 PM
+                    - generic [ref=e219]: Free
+          - heading "Sat 6 Jun" [level=2] [ref=e220]
+          - link "Chaske 24 Hour Dj Marathon For Charity Chaske 24 Hour Dj Marathon For Charity Brooklyn Jun 6 – 7 Free House Minimal House Deep House" [ref=e221] [cursor=pointer]:
+            - /url: /en/events/chaske-24-hour-dj-marathon-for-charity
+            - generic [ref=e222]:
+              - img "Chaske 24 Hour Dj Marathon For Charity" [ref=e224]
+              - generic [ref=e225]:
+                - paragraph [ref=e227]: Chaske 24 Hour Dj Marathon For Charity
+                - generic [ref=e228]:
+                  - generic [ref=e229]: Brooklyn
+                  - generic [ref=e230]:
+                    - generic [ref=e231]:
+                      - time [ref=e232]: Jun
+                      - time [ref=e233]: "6"
+                      - generic [ref=e234]: –
+                      - time [ref=e235]: "7"
+                    - generic [ref=e236]: Free
+                - generic [ref=e237]:
+                  - generic [ref=e238]: House
+                  - generic [ref=e239]: Minimal House
+                  - generic [ref=e240]: Deep House
+          - heading "Tue 9 Jun" [level=2] [ref=e241]
+          - link "Extra Spicy Please Open Decks - Anniversary Edition Extra Spicy Please Open Decks - Anniversary Edition Honey's Tue, Jun 9 | 6:00 PM $6.00" [ref=e242] [cursor=pointer]:
+            - /url: /en/events/extra-spicy-please-open-decks-jun9
+            - generic [ref=e243]:
+              - img "Extra Spicy Please Open Decks - Anniversary Edition" [ref=e245]
+              - generic [ref=e246]:
+                - paragraph [ref=e248]: Extra Spicy Please Open Decks - Anniversary Edition
+                - generic [ref=e249]:
+                  - generic [ref=e250]: Honey's
+                  - generic [ref=e251]:
+                    - generic [ref=e252]:
+                      - time [ref=e253]: Tue, Jun 9
+                      - generic [ref=e254]:
+                        - generic [ref=e255]: "|"
+                        - time [ref=e256]: 6:00 PM
+                    - generic [ref=e257]: $6.00
+          - heading "Wed 10 Jun" [level=2] [ref=e258]
+          - link "Legendari Legendari MAD RADIO NYC Wed, Jun 10 | 6:00 PM Free" [ref=e259] [cursor=pointer]:
+            - /url: /en/events/legendari
+            - generic [ref=e260]:
+              - img "Legendari" [ref=e262]
+              - generic [ref=e263]:
+                - paragraph [ref=e265]: Legendari
+                - generic [ref=e266]:
+                  - generic [ref=e267]: MAD RADIO NYC
+                  - generic [ref=e268]:
+                    - generic [ref=e269]:
+                      - time [ref=e270]: Wed, Jun 10
+                      - generic [ref=e271]:
+                        - generic [ref=e272]: "|"
+                        - time [ref=e273]: 6:00 PM
+                    - generic [ref=e274]: Free
+          - 'link "Wednesday Jamzz: George Winstone Band Wednesday Jamzz: George Winstone Band Moondog HiFi Wed, Jun 10 | 7:00 PM Free" [ref=e275] [cursor=pointer]':
+            - /url: /en/events/wednesday-j-am-zz-floyd-ding-trio-2
+            - generic [ref=e276]:
+              - 'img "Wednesday Jamzz: George Winstone Band" [ref=e278]'
+              - generic [ref=e279]:
+                - paragraph [ref=e281]: "Wednesday Jamzz: George Winstone Band"
+                - generic [ref=e282]:
+                  - generic [ref=e283]: Moondog HiFi
+                  - generic [ref=e284]:
+                    - generic [ref=e285]:
+                      - time [ref=e286]: Wed, Jun 10
+                      - generic [ref=e287]:
+                        - generic [ref=e288]: "|"
+                        - time [ref=e289]: 7:00 PM
+                    - generic [ref=e290]: Free
+          - heading "Thu 11 Jun" [level=2] [ref=e291]
+          - 'link "Mexico Vs South Africa: World Cup Viewing Party Mexico Vs South Africa: World Cup Viewing Party The Summer Club Thu, Jun 11 | 12:00 PM $5.16" [ref=e292] [cursor=pointer]':
+            - /url: /en/events/mexico-vs-south-africa-world-cup-viewing-party
+            - generic [ref=e293]:
+              - 'img "Mexico Vs South Africa: World Cup Viewing Party" [ref=e295]'
+              - generic [ref=e296]:
+                - paragraph [ref=e298]: "Mexico Vs South Africa: World Cup Viewing Party"
+                - generic [ref=e299]:
+                  - generic [ref=e300]: The Summer Club
+                  - generic [ref=e301]:
+                    - generic [ref=e302]:
+                      - time [ref=e303]: Thu, Jun 11
+                      - generic [ref=e304]:
+                        - generic [ref=e305]: "|"
+                        - time [ref=e306]: 12:00 PM
+                    - generic [ref=e307]: $5.16
+          - link "View more" [ref=e309] [cursor=pointer]:
+            - /url: /en/cities/new-york?page=1
+      - heading "Artists to see in New York" [level=2] [ref=e311]
+      - heading "Popular organizers in New York" [level=2] [ref=e339]
+      - heading "Cities near New York" [level=2] [ref=e367]
+    - navigation [ref=e389]:
+      - generic [ref=e390]:
+        - generic [ref=e392]:
+          - link "Home" [ref=e393] [cursor=pointer]:
+            - /url: /en
+            - img [ref=e394]
+          - link "List your event" [ref=e396] [cursor=pointer]:
+            - /url: https://smartboard.shotgun.live/?utm_source=b2c_website&utm_campaign=footer
+            - text: List your event
+            - img [ref=e397]
+        - generic [ref=e399]:
+          - generic [ref=e400]:
+            - heading "About" [level=3] [ref=e401]
+            - list [ref=e402]:
+              - listitem [ref=e403]:
+                - link "I'm an organizer" [ref=e404] [cursor=pointer]:
+                  - /url: https://pro.shotgun.live/
+              - listitem [ref=e405]:
+                - link "Shotgun for Artists" [ref=e406] [cursor=pointer]:
+                  - /url: https://artist.shotgun.live/
+              - listitem [ref=e407]:
+                - link "Press kit" [ref=e408] [cursor=pointer]:
+                  - /url: https://drive.google.com/drive/folders/1ulymAwQQBbB1pb_wdUbg0cv_ljxcptp4
+              - listitem [ref=e409]:
+                - link "We're hiring 🦄" [ref=e410] [cursor=pointer]:
+                  - /url: https://shotgun.teamtailor.com/
+              - listitem [ref=e411]:
+                - link "Artists" [ref=e412] [cursor=pointer]:
+                  - /url: /en/artists
+              - listitem [ref=e413]:
+                - link "Concerts" [ref=e414] [cursor=pointer]:
+                  - /url: /en/concerts
+          - generic [ref=e415]:
+            - heading "Popular cities" [level=3] [ref=e416]
+            - list [ref=e417]:
+              - listitem [ref=e418]:
+                - link "New York" [ref=e419] [cursor=pointer]:
+                  - /url: /en/cities/new-york
+              - listitem [ref=e420]:
+                - link "Washington DC" [ref=e421] [cursor=pointer]:
+                  - /url: /en/cities/washington-dc
+              - listitem [ref=e422]:
+                - link "Atlanta" [ref=e423] [cursor=pointer]:
+                  - /url: /en/cities/atlanta
+              - listitem [ref=e424]:
+                - link "Miami" [ref=e425] [cursor=pointer]:
+                  - /url: /en/cities/miami
+              - listitem [ref=e426]:
+                - link "Los Angeles" [ref=e427] [cursor=pointer]:
+                  - /url: /en/cities/los-angeles
+              - listitem [ref=e428]:
+                - link "View all" [ref=e429] [cursor=pointer]:
+                  - /url: /en/cities
+          - generic [ref=e430]:
+            - heading "Support" [level=3] [ref=e431]
+            - list [ref=e432]:
+              - listitem [ref=e433]:
+                - link "Help center" [ref=e434] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc?utm_source=shotgun-web
+              - listitem [ref=e435]:
+                - link "Contact us" [ref=e436] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc/requests/new?utm_source=shotgun-web
+              - listitem [ref=e437]:
+                - link "Report content" [ref=e438] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc/articles/28403164081682--Report-Illegal-Content
+        - generic [ref=e439]:
+          - generic [ref=e440]:
+            - heading "Join the community" [level=3] [ref=e441]
+            - generic [ref=e442]:
+              - link "App Store" [ref=e443] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/shotgun/id760028892
+                - img [ref=e444]
+                - text: App Store
+              - link "Play Store" [ref=e446] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.shotguntheapp.android
+                - img [ref=e447]
+                - text: Play Store
+          - generic [ref=e449]:
+            - heading "We are social :)" [level=3] [ref=e450]
+            - generic [ref=e451]:
+              - link "TikTok" [ref=e452] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@shotgun.usa
+                - img [ref=e453]
+                - generic [ref=e455]: TikTok
+              - link "Instagram" [ref=e456] [cursor=pointer]:
+                - /url: https://www.instagram.com/shotgun.usa
+                - img [ref=e457]
+                - generic [ref=e459]: Instagram
+              - link "Spotify" [ref=e460] [cursor=pointer]:
+                - /url: https://open.spotify.com/user/bcyeq541kbgzp0yhd949c3yk9
+                - img [ref=e461]
+                - generic [ref=e463]: Spotify
+              - link "LinkedIn" [ref=e464] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/shotgun-
+                - img [ref=e465]
+                - generic [ref=e467]: LinkedIn
+        - generic [ref=e469]:
+          - generic [ref=e470]:
+            - link "Terms and conditions" [ref=e471] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330476029330?utm_source=shotgun-web
+            - link "Privacy policy" [ref=e472] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330537455762?utm_source=shotgun-web
+            - link "Consumer information" [ref=e473] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330504165650?utm_source=shotgun-web
+            - generic [ref=e474] [cursor=pointer]: Cookies policy
+            - link "Partners" [ref=e475] [cursor=pointer]:
+              - /url: /en/partners-cookies
+          - generic [ref=e476]:
+            - generic [ref=e477]: English
+            - img [ref=e478]
+            - combobox "Select language" [ref=e480] [cursor=pointer]:
+              - option "English" [selected]
+              - option "Français"
+              - option "Español"
+              - option "Português (Brasil)"
+              - option "Português Europeu"
+        - generic [ref=e481]: © 2026 Shotgun SAS. All rights reserved.
+        - generic [ref=e482]:
+          - text: This site is protected by reCAPTCHA and the Google
+          - link "Privacy Policy" [ref=e483] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy
+          - text: and
+          - link "Terms of Service" [ref=e484] [cursor=pointer]:
+            - /url: https://policies.google.com/terms
+          - text: apply.
+  - region "Notifications alt+T"

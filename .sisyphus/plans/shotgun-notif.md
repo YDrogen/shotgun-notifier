@@ -431,6 +431,437 @@ Wave FINAL (After ALL tasks — verification):
   - Files: `src/logger.ts`, `src/notifier.ts`
   - Pre-commit: `bun test`
 
+- [x] 4. Playwright validation gate
+
+  **What to do**:
+  - Create `src/validation-gate.ts` — a **research script** that probes a real Shotgun event page and documents findings
+  - Launch Playwright Chromium (headless) against a known Shotgun event URL
+  - Intercept ALL network requests with `page.on('response')` and log URLs containing `shotgun` or `api`
+  - Look for `__NEXT_DATA__` script tag in page source — extract and log any ticket/availability data
+  - Search DOM for ticket-related text: "Sold out", "Available", "Buy", "Waiting list", price patterns (€, £, $)
+  - Use partial class matching (`[class*="ticket"]`, `[class*="button"]`, `[class*="disabled"]`) — NOT exact dynamic class names
+  - Document all findings in a `VALIDATION-GATE-REPORT.md` file in the project root:
+    - Network API endpoints discovered (URLs, response shapes)
+    - `__NEXT_DATA__` structure (if found)
+    - DOM selectors that work for ticket status detection
+    - Whether headless Chromium is blocked by Vercel (response codes)
+    - Load time metrics
+  - If headless is blocked, test headed mode: `chromium.launch({ headless: false })`
+  - If Vercel bot detection triggers, document the exact error and recommend approach (headed mode, stealth, etc.)
+  - This task PRODUCES a report — the scraper in Task 6 will be built based on these findings
+
+  **Must NOT do**:
+  - Do NOT write the production scraper yet — this is research only
+  - Do NOT implement anti-bot circumvention — just document if it's needed
+  - Do NOT add `playwright-extra` or stealth plugins — test vanilla Playwright first
+  - Do NOT hardcode any selectors from existing `shotgun-monitor` project (they use `css-5ox9as` which will break)
+
+  **Recommended Agent Profile**:
+  - **Category**: `deep`
+  - **Skills**: []
+
+  **Parallelization**:
+  - **Can Run In Parallel**: YES (within Wave 2)
+  - **Parallel Group**: Wave 2 (with Task 5)
+  - **Blocks**: Tasks 6, 7
+  - **Blocked By**: Task 1 (project must exist with Playwright installed)
+
+  **Acceptance Criteria**:
+
+  - [x] `VALIDATION-GATE-REPORT.md` exists in project root with documented findings
+  - [x] Report includes: network endpoints found, DOM detection strategy, bot detection status
+  - [x] Script runs without crashing (even if Shotgun blocks headless — document that finding)
+  - [x] At least ONE viable strategy for detecting ticket status is documented
+
+  **QA Scenarios (MANDATORY)**:
+
+  ```
+  Scenario: Validation gate script runs and produces report
+    Tool: Bash
+    Preconditions: Playwright installed, Chromium available, internet access
+    Steps:
+      1. Run `bun run src/validation-gate.ts`
+      2. Wait for script to complete (max 60 seconds)
+      3. Check that VALIDATION-GATE-REPORT.md exists
+      4. Read report and verify it contains sections for: network endpoints, DOM detection, bot detection status
+    Expected Result: Report file created with documented findings about Shotgun page structure
+    Failure Indicators: Script crashes, no report file, report is empty
+    Evidence: .sisyphus/evidence/task-4-validation-report.md
+
+  Scenario: Bot detection status is documented
+    Tool: Bash
+    Preconditions: Validation gate script completed
+    Steps:
+      1. Read VALIDATION-GATE-REPORT.md
+      2. Find the "Bot Detection" section
+      3. Verify it contains either "NO BLOCKING DETECTED" or describes the blocking mechanism
+    Expected Result: Clear yes/no answer on whether headless Playwright can access Shotgun
+    Failure Indicators: No bot detection section, vague documentation
+    Evidence: .sisyphus/evidence/task-4-bot-detection.txt
+  ```
+
+  **Commit**: YES
+  - Message: `chore(validate): playwright validation gate findings`
+  - Files: `src/validation-gate.ts`, `VALIDATION-GATE-REPORT.md`
+  - Pre-commit: `bun run check`
+
+- [x] 5. State tracker
+
+  **What to do**:
+  - Create `src/state.ts` with:
+    - `EventStateTracker` class that maintains in-memory state per event URL
+    - `getState(url: string): EventStatus | undefined` — get current state
+    - `updateState(url: string, event: EventConfig, newStatus: EventStatus): StateChange[]` — compare with previous state and return changes
+    - `StateChange` type: `{ event: EventConfig; previousState: EventState; newState: EventState; categories: TicketCategory[] }`
+    - First check for an event should return a StateChange with `previousState: 'unknown'` — this ensures first-run notification
+    - Track `consecutiveFailures` per event — increment on failure, reset on success
+    - `isUnhealthy(url: string): boolean` — returns true if `consecutiveFailures >= 5`
+  - Add unit tests for state tracking:
+    - First update returns state change (unknown → any state)
+    - Same state on consecutive updates returns no state change
+    - Transition from sold_out → available returns state change
+    - Transition from available → sold_out returns state change
+    - Consecutive failures tracked correctly, unhealthy threshold works
+
+  **Must NOT do**:
+  - Do NOT persist state to disk — in-memory only per user requirement
+  - Do NOT add file-based state or database — state resets on process restart
+  - Do NOT add distributed state (Redis, etc.) — single process only
+
+  **Recommended Agent Profile**:
+  - **Category**: `quick`
+  - **Skills**: []
+
+  **Parallelization**:
+  - **Can Run In Parallel**: YES (within Wave 2)
+  - **Parallel Group**: Wave 2 (with Task 4)
+  - **Blocks**: Tasks 6, 7
+  - **Blocked By**: Task 2 (needs types from types.ts)
+
+  **Acceptance Criteria**:
+
+  - [x] `bun test src/state.test.ts` passes all 5+ test cases
+  - [x] First update for any URL returns state change (unknown → detected state)
+  - [x] Consecutive updates with same state return no state change
+  - [x] State transitions correctly detected (sold_out→available, available→sold_out)
+  - [x] Consecutive failure tracking works, `isUnhealthy` returns true at threshold 5
+  - [x] No file I/O — pure in-memory state
+
+  **QA Scenarios (MANDATORY)**:
+
+  ```
+  Scenario: State change detection works correctly
+    Tool: Bash
+    Preconditions: State tracker module compiled and tests pass
+    Steps:
+      1. Run `bun test src/state.test.ts`
+      2. Verify all test cases pass: first update, same state, transitions, failures
+    Expected Result: All tests pass, state transitions correctly detected
+    Failure Indicators: Any test failure, incorrect transition detection
+    Evidence: .sisyphus/evidence/task-5-state-tests.txt
+
+  Scenario: First check produces notification change
+    Tool: Bash
+    Preconditions: State tracker with empty initial state
+    Steps:
+      1. Create a fresh EventStateTracker instance
+      2. Call updateState with a URL and status { state: 'sold_out', categories: [] }
+      3. Verify returned StateChange has previousState: 'unknown', newState: 'sold_out'
+    Expected Result: StateChange returned on first check, ensuring first-run notification
+    Failure Indicators: No StateChange returned, previousState not 'unknown'
+    Evidence: .sisyphus/evidence/task-5-first-check.txt
+  ```
+
+  **Commit**: YES
+  - Message: `feat(state): add event state tracker`
+  - Files: `src/state.ts`
+  - Pre-commit: `bun test`
+
+- [ ] 6. Scraper module
+
+  **What to do**:
+  - Create `src/scraper.ts` with Playwright-based page scraping
+  - **PRIMARY strategy**: Network interception — intercept `text/x-component` responses (Next.js App Router flight data) that contain structured ticket data with `isSoldOut`, `deals[].quantityLeft`, `isWaitingListAvailable`
+    - Use `page.on('response')` to capture responses with content-type `text/x-component`
+    - Parse the flight data JSON to extract ticket availability
+    - Map `isSoldOut: true` → `state: 'sold_out'`, `isSoldOut: false` → `state: 'available'`
+    - Map `deals[]` to `TicketCategory[]` with name, price, and status based on `quantityLeft`
+  - **FALLBACK strategy**: DOM scraping using text patterns (NOT dynamic CSS classes)
+    - Look for text content: "Sold out", "Available", "Buy", "Waiting list", price patterns
+    - Use partial class matching: `[class*="ticket"]`, `[class*="button"]`, `[class*="disabled"]`
+    - Check for `disabled` attributes on parent elements
+  - `scrapeEvent(url: string): Promise<ScrapeResult>` — returns `{ state: EventState, categories: TicketCategory[], raw?: unknown }`
+  - Handle errors gracefully: timeouts, 429s, network errors, unexpected page structure
+  - Return `{ state: 'unknown' }` on any scrape failure (do NOT throw for expected failures)
+  - Create a NEW browser context for each call, CLOSE it after (never reuse)
+  - Add `playwright` import and browser launch logic — shared browser instance, per-call context
+  - Configure page with: realistic user agent, viewport, locale `en-GB`, request interception to skip images/CSS/fonts for speed
+  - Respect `VALIDATION-GATE-REPORT.md` findings — implement the strategies that worked during validation
+  - Export `initBrowser(): Promise<Browser>` and `closeBrowser(): Promise<void>` for lifecycle management
+
+  **Must NOT do**:
+  - Do NOT use hardcoded CSS class names like `css-5ox9as` — they will break
+  - Do NOT reuse browser contexts across poll cycles — memory leak risk
+  - Do NOT install stealth plugins — vanilla Playwright first, only add if validation gate showed blocking
+  - Do NOT download images/CSS/fonts — skip them via request interception for speed
+  - Do NOT throw errors on scrape failure — return `{ state: 'unknown' }` for resilience
+
+  **Recommended Agent Profile**:
+  - **Category**: `deep`
+  - **Skills**: []
+
+  **Parallelization**:
+  - **Can Run In Parallel**: NO (within Wave 3 — must wait for Task 7 to be ready)
+  - **Parallel Group**: Wave 3 (with Task 7, but Task 7 depends on this)
+  - **Blocks**: Tasks 7, 8
+  - **Blocked By**: Tasks 3 (logger), 4 (validation gate findings), 5 (state tracker types)
+
+  **Acceptance Criteria**:
+
+  - [ ] `scrapeEvent()` returns `{ state: 'available' | 'sold_out' | 'unknown', categories: TicketCategory[] }`
+  - [ ] Network interception is primary strategy (checked first before DOM fallback)
+  - [ ] Browser context created and closed per call (no reuse)
+  - [ ] Scrape failures return `{ state: 'unknown' }` without throwing
+  - [ ] Images/CSS/fonts are aborted via request interception (faster loads)
+  - [ ] Scraper uses strategies from VALIDATION-GATE-REPORT.md (not hardcoded dynamic classes)
+
+  **QA Scenarios (MANDATORY)**:
+
+  ```
+  Scenario: Scraper detects available tickets on real Shotgun page
+    Tool: Bash
+    Preconditions: Playwright installed, internet access, VALIDATION-GATE-REPORT.md exists
+    Steps:
+      1. Run scraper against a real Shotgun event URL that has tickets available
+      2. Check that state returned is 'available' with populated categories
+      3. Check logs show network interception events
+    Expected Result: ScrapeResult with state: 'available' and at least one category
+    Failure Indicators: state: 'unknown', empty categories, no network events logged
+    Evidence: .sisyphus/evidence/task-6-available-tickets.json
+
+  Scenario: Scraper handles page load failure gracefully
+    Tool: Bash
+    Preconditions: Network can be simulated as unavailable (or use a non-existent URL)
+    Steps:
+      1. Call scrapeEvent with invalid URL or simulate timeout
+      2. Verify return is { state: 'unknown', categories: [] }
+      3. Verify NO crash or unhandled exception
+      4. Check logs contain warning about failure
+    Expected Result: Graceful fallback with 'unknown' state, no crash
+    Failure Indicators: Unhandled promise rejection, process crash, empty error message
+    Evidence: .sisyphus/evidence/task-6-failure-handling.txt
+
+  Scenario: Browser context cleanup (no memory leak)
+    Tool: Bash
+    Preconditions: Scraper running multiple poll cycles
+    Steps:
+      1. Call scrapeEvent 5 times in sequence
+      2. After each call, verify no orphan browser contexts remain
+      3. Check process memory doesn't grow significantly between calls
+    Expected Result: Memory stable (~50MB variance), no leaked contexts
+    Failure Indicators: Memory growing by >100MB per cycle, leaked browser processes
+    Evidence: .sisyphus/evidence/task-6-memory-stability.txt
+  ```
+
+  **Commit**: YES
+  - Message: `feat(scraper): add playwright scraper module`
+  - Files: `src/scraper.ts`
+  - Pre-commit: `bun run check`
+
+- [ ] 7. Orchestrator (poll loop + backoff + browser lifecycle)
+
+  **What to do**:
+  - Create `src/orchestrator.ts` with:
+    - `startMonitoring(config: Config): Promise<void>` — main poll loop
+    - For each event in config: create `EventStateTracker` instance, begin polling
+    - Poll implementation: `setInterval` at `config.pollIntervalMs` default 60000ms
+    - Per poll cycle:
+      1. Create new browser context
+      2. Run `scrapeEvent(url)` 
+      3. Run `stateTracker.updateState(url, result)` — get StateChange[]
+      4. For each StateChange: call `sendNotification()`
+      5. If `stateTracker.isUnhealthy(url)`: call `sendUnhealthyAlert()`
+      6. Close browser context (in finally block — always close)
+    - Exponential backoff on failures: base interval * 2^attempt, capping at 15 minutes
+      - Track failures per event (in state tracker)
+      - On success: reset backoff to base interval
+      - On failure: double interval, max 15min (900000ms)
+    - Browser lifecycle: `initBrowser()` once at startup, `closeBrowser()` on shutdown
+    - Sequential event processing within a poll (not parallel — avoid opening too many browser tabs)
+    - Pino logging: log every poll start, state change, notification sent, error, backoff
+
+  **Must NOT do**:
+  - Do NOT process events in parallel — one browser context at a time to avoid detection and memory issues
+  - Do NOT reuse browser contexts across polls — create new, close after
+  - Do NOT add node-cron — use setInterval for simpler implementation
+  - Do NOT persist state to disk — in-memory only
+  - Do NOT add Smart scheduling — fixed interval with backoff only
+
+  **Recommended Agent Profile**:
+  - **Category**: `deep`
+  - **Skills**: []
+
+  **Parallelization**:
+  - **Can Run In Parallel**: NO (depends on Task 6 for scraper interface)
+  - **Parallel Group**: Wave 3 (starts after Task 6 completes)
+  - **Blocks**: Task 8
+  - **Blocked By**: Tasks 3 (logger, notifier), 5 (state tracker), 6 (scraper)
+
+  **Acceptance Criteria**:
+
+  - [ ] `startMonitoring(config)` runs polling loop at configured interval
+  - [ ] Browser context created per poll, closed in finally block
+  - [ ] State changes trigger Discord notifications
+  - [ ] Unhealthy events (5+ failures) trigger unhealthy alerts
+  - [ ] Exponential backoff: 1min → 2min → 4min → 8min → 15min cap
+  - [ ] Success resets backoff to base interval
+  - [ ] Events processed sequentially (not in parallel)
+  - [ ] All actions logged with Pino (component + eventId context)
+
+  **QA Scenarios (MANDATORY)**:
+
+  ```
+  Scenario: Orchestrator runs full poll cycle
+    Tool: Bash
+    Preconditions: Valid config.json with at least one event URL, Playwright installed
+    Steps:
+      1. Start orchestrator with config: { events: [{url: "real-shotgun-url", name: "Test"}], pollIntervalMs: 30000 }
+      2. Wait 35 seconds for first poll
+      3. Check logs for: "starting poll", "scraping event", state change (or no change)
+      4. Send SIGTERM to process
+      5. Verify process shuts down gracefully
+    Expected Result: One poll completed, logs show scrape attempt, graceful shutdown
+    Failure Indicators: No logs, crash on startup, no poll execution
+    Evidence: .sisyphus/evidence/task-7-poll-cycle.txt
+
+  Scenario: Exponential backoff on consecutive failures
+    Tool: Bash (unit test)
+    Preconditions: Mock scraper that always returns { state: 'unknown' }
+    Steps:
+      1. Configure orchestrator with mock scraper
+      2. Run 5 consecutive failures
+      3. Verify poll intervals: 60000, 120000, 240000, 480000, 900000 (capped)
+    Expected Result: Interval doubles each failure, capped at 15 minutes
+    Failure Indicators: Interval doesn't increase, exceeds 15min cap, resets unexpectedly
+    Evidence: .sisyphus/evidence/task-7-backoff.txt
+
+  Scenario: Unhealthy alert after 5 failures
+    Tool: Bash (unit test)
+    Preconditions: Mock scraper that always fails
+    Steps:
+      1. Run 5 consecutive failures for same event
+      2. Verify sendUnhealthyAlert was called after the 5th failure
+      3. Verify subsequent failures still send unhealthy alerts
+    Expected Result: Unhealthy alert triggered at 5th consecutive failure
+    Failure Indicators: No alert sent, alert sent too early, alerts stop after threshold
+    Evidence: .sisyphus/evidence/task-7-unhealthy-alert.txt
+  ```
+
+  **Commit**: YES
+  - Message: `feat(orchestrator): add poll orchestrator with backoff`
+  - Files: `src/orchestrator.ts`
+  - Pre-commit: `bun test`
+
+- [ ] 8. CLI entry point + graceful shutdown + integration testing
+
+  **What to do**:
+  - Update `src/index.ts` as the CLI entry point:
+    - Parse `--config` CLI argument (default: `./config.json`)
+    - Call `loadConfig(configPath)` — on failure: print validation errors, exit 1
+    - Validate Discord webhook URL with `validateWebhookUrl()` — on failure: print error, exit 1
+    - Call `initBrowser()` before starting
+    - Start monitoring with `startMonitoring(config)`
+    - Register signal handlers for SIGTERM, SIGINT, SIGHUP:
+      - Set a `isShuttingDown` flag to prevent new polls
+      - Wait for current poll to complete (max 30 seconds)
+      - Close browser with `closeBrowser()`
+      - Log "Shutting down gracefully" and exit 0
+    - Register `beforeExit` hook for cleanup
+    - Log startup: "Shotgun Ticket Monitor started. Monitoring N events at Xms interval."
+  - Add `.env.example` with `DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...` (optional, for env var usage)
+  - Create `config.example.json` with 2 placeholder event URLs if not exists (from Task 2)
+  - Add integration test that runs the full flow end-to-end:
+    - Create a test config with a real Shotgun URL
+    - Start monitoring, wait for first poll
+    - Verify logs show poll execution and state detection
+    - Send SIGTERM and verify graceful shutdown
+  - Verify `bun run src/index.ts --config config.json` starts and monitors correctly
+
+  **Must NOT do**:
+  - Do NOT add `commander` or `yargs` — simple `--config` flag only, use `process.argv`
+  - Do NOT add config hot-reload — restart to apply changes
+  - Do NOT add daemonization — runs in terminal, user can use systemd/tmux if desired
+  - Do NOT add `dotenv` — config in JSON, webhook URL in config (or process.env override)
+  - Do NOT add Docker/PKG packaging — bare Bun project only
+
+  **Recommended Agent Profile**:
+  - **Category**: `unspecified-high`
+  - **Skills**: []
+
+  **Parallelization**:
+  - **Can Run In Parallel**: NO (final task, depends on all others)
+  - **Parallel Group**: Wave 4 (sequential)
+  - **Blocks**: None (last implementation task)
+  - **Blocked By**: Tasks 2, 3, 7
+
+  **Acceptance Criteria**:
+
+  - [ ] `bun run src/index.ts --config config.json` starts and logs "Monitoring N events"
+  - [ ] `bun run src/index.ts --config nonexistent.json` exits with code 1 and validation error
+  - [ ] `bun run src/index.ts --config invalid.json` (bad schema) exits 1 with clear field errors
+  - [ ] SIGTERM sends graceful shutdown: logs message, closes browser, exits 0
+  - [ ] SIGINT (Ctrl+C) also triggers graceful shutdown
+  - [ ] Full integration test passes: start → poll → detect state → (mock) notify → SIGTERM → shutdown
+
+  **QA Scenarios (MANDATORY)**:
+
+  ```
+  Scenario: App starts with valid config and monitors events
+    Tool: Bash
+    Preconditions: Valid config.json with real Shotgun URL and Discord webhook URL
+    Steps:
+      1. Run `bun run src/index.ts --config config.json`
+      2. Wait for startup log: "Shotgun Ticket Monitor started"
+      3. Wait for first poll log: "Polling event: [name]"
+      4. Send SIGTERM to process
+      5. Verify "Shutting down gracefully" log
+      6. Verify process exits with code 0
+    Expected Result: App starts, polls event, shuts down gracefully on SIGTERM
+    Failure Indicators: Crash on startup, no poll logs, SIGTERM kills without cleanup
+    Evidence: .sisyphus/evidence/task-8-start-monitor.txt
+
+  Scenario: App exits with error on invalid config
+    Tool: Bash
+    Preconditions: Invalid config.json (missing required fields)
+    Steps:
+      1. Create invalid config: { "events": [] }
+      2. Run `bun run src/index.ts --config invalid-config.json`
+      3. Check exit code is 1
+      4. Check stderr contains validation error details
+    Expected Result: Exit code 1, clear error messages about missing fields
+    Failure Indicators: Exit code 0, generic error, no field-level details
+    Evidence: .sisyphus/evidence/task-8-invalid-config.txt
+
+  Scenario: Graceful shutdown during active poll
+    Tool: Bash
+    Preconditions: App running, mid-poll
+    Steps:
+      1. Start app with valid config
+      2. Wait for poll to start (log: "Polling event")
+      3. Send SIGTERM immediately
+      4. Verify process waits for current poll to complete (does NOT kill mid-scrape)
+      5. Verify browser is closed after shutdown
+      6. Verify exit code is 0
+    Expected Result: Current poll completes, then shutdown, exit 0
+    Failure Indicators: Process killed mid-scrape, browser process orphaned, exit code non-zero
+    Evidence: .sisyphus/evidence/task-8-graceful-shutdown.txt
+  ```
+
+  **Commit**: YES
+  - Message: `feat(cli): add entry point and graceful shutdown`
+  - Files: `src/index.ts`
+  - Pre-commit: `bun run check && bun test`
+
 ---
 
 ## Final Verification Wave (MANDATORY — after ALL implementation tasks)

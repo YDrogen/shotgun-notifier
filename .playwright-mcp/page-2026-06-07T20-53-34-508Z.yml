@@ -1,0 +1,429 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link "Home" [ref=e6] [cursor=pointer]:
+            - /url: /en
+            - img [ref=e7]
+          - link "Search for an event, artist, organizer or city" [ref=e9] [cursor=pointer]:
+            - /url: /en/search
+            - img [ref=e10]
+            - searchbox "Search for an event, artist, organizer or city" [ref=e13]
+          - button "Explore" [ref=e14] [cursor=pointer]:
+            - text: Explore
+            - img [ref=e15]
+        - link "Login / Sign up" [ref=e18] [cursor=pointer]:
+          - /url: /en/login?redirect=%2Fevents%2Fduality-by-energy-festival%3F
+    - generic [ref=e19]:
+      - navigation "breadcrumb" [ref=e20]:
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - link "Home" [ref=e23] [cursor=pointer]:
+              - /url: /en
+          - listitem [ref=e24]:
+            - img [ref=e25]
+          - listitem [ref=e27]:
+            - link "Festivals in Europe" [ref=e28] [cursor=pointer]:
+              - /url: /en/festivals/-/europe
+          - listitem [ref=e29]:
+            - img [ref=e30]
+          - listitem [ref=e32]:
+            - link "Festivals in Belgium" [ref=e33] [cursor=pointer]:
+              - /url: /en/festivals/-/europe/belgium
+          - listitem [ref=e34]:
+            - img [ref=e35]
+          - listitem [ref=e37]:
+            - link "Duality By Energy Festival" [disabled] [ref=e38]
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - heading "Duality By Energy Festival" [level=1] [ref=e44]
+          - generic [ref=e45]:
+            - text: By
+            - link "ENERGY Festival" [ref=e46] [cursor=pointer]:
+              - /url: /en/venues/energy-festival
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - img [ref=e49]
+            - generic [ref=e52]: Happened on Sat 3 May 2025
+          - generic [ref=e53]:
+            - img [ref=e54]
+            - generic [ref=e56]: Lotto Mons Expo
+          - generic [ref=e57]:
+            - img [ref=e58]
+            - generic [ref=e60]: Avenue Thomas Edison 2, 7000 Mons, Belgique
+        - generic [ref=e61]:
+          - strong [ref=e62]: "557"
+          - text: are interested
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]: Description
+          - generic [ref=e69]: "🇫🇷 ENERGY FESTIVAL REVIENT LE 03 MAI AVEC UN CONCEPT EXPLOSIF : \"DUALITY\" Prépare-toi à une nuit de battles épiques ! Deux DJ’s, un ring, un seul vainqueur. ⚡ Mix contre mix, ils s’affrontent pour faire vibrer la foule, et c’est toi seul qui décideras du champion à chaque duel! 👊 Un total de 87 artistes dispersés dans 3 salles différentes! Le 03 mai, entre dans l’arène. \"DUALITY\" : une soirée, deux énergies, une expérience unique. 🔥 🇬🇧 ENERGY FESTIVAL RETURNS ON MAY 3RD WITH AN EXPLOSIVE CONCEPT: \"DUALITY\" Get ready for a night of epic battles! Two DJs, one ring, one winner. ⚡ Mix against mix, they’ll go head-to-head to ignite the crowd, and you alone will decide the champion of each duel! 👊 On May 3rd, step into the arena. \"DUALITY\": one night, two energies, a unique experience. 🔥 ⭐️LINE UP⭐️ Act Of Rage vs Hard Driver / Krowdexx vs Toza / Adaro vs Rejecta / The Purge vs The Saints / Malice vs Kenai / R3trix vs Miss Pepper / Sub Sonik vs Strike Blood / Vexxed vs Sanctuary / Bassbrain vs LNY TNZ / Killshot vs Rvage / Omni vs Rawpvck / Physika vs Unvizion N-Vitral vs Deadly Guns / Noxiouz vs Lekkerfaces / DRS VS MBK vs Reflexx / RAYZEN vs RDØ / X-Pense vs Revedge / Dither vs Yoshiko / Spitnoise vs Lunakorpz / F.Noize vs Soulblast / The Satan vs The Immortal / Nrki vs Sandy Warez / Guizcore vs STV Dr. Peacock / Billx / D-Fence vs Juliëx / Promo vs Panic / Sakyra vs Dark Phoenix / Vernex vs Toxic Twins / Neophyte vs The Viper / Why T vs Raiden / Korsakoff vs Tha Playah / Seak vs Tony V Papi Jumper vs Davoodi & Bestien / Ronald V vs Loic D / Demoniak vs Lethal MG / Invictus vs Teka B / Dark E vs Miss Puss / Greg C vs Binum / Ruthless vs Potato 📌 Place/Lieu: LOTTO MONS EXPO (Mons - Belgique) Temps de route approximatif: ❚ 30 min: TOURNAI 🇧🇪 / VALENCIENNES - MAUBEUGE 🇫🇷 ❚ 1H00: NAMUR - KORTRIJK 🇧🇪 ❚ 1H30-02H00: AMIENS 🇫🇷 / BREDA - MAASTRICHT 🇳🇱 / HASSELT - GEBRUIK - OOSTENDE - ANTWERPEN 🇧🇪 ❚ 02H00 - 03H00: REIMS - ROUEN - PARIS - METZ 🇫🇷 / AMSTERDAM 🇳🇱 / LUXEMBOURG 🇱🇺"
+        - generic [ref=e70]:
+          - generic [ref=e71]: Lineup
+          - generic [ref=e72]:
+            - link "N-Vitral N-Vitral" [ref=e73] [cursor=pointer]:
+              - /url: /en/artists/nvitral
+              - img "N-Vitral" [ref=e74]
+              - generic [ref=e76]: N-Vitral
+            - link "Deadly Guns Deadly Guns" [ref=e77] [cursor=pointer]:
+              - /url: /en/artists/deadlygunsofficial
+              - img "Deadly Guns" [ref=e78]
+              - generic [ref=e80]: Deadly Guns
+            - link "Papi Jumper Papi Jumper" [ref=e81] [cursor=pointer]:
+              - /url: /en/artists/papijumper
+              - img "Papi Jumper" [ref=e82]
+              - generic [ref=e83]:
+                - generic [ref=e84]: Papi Jumper
+                - img [ref=e86]
+            - link "Bestien Bestien" [ref=e88] [cursor=pointer]:
+              - /url: /en/artists/bestien
+              - img "Bestien" [ref=e89]
+              - generic [ref=e91]: Bestien
+            - link "Davoodi Davoodi" [ref=e92] [cursor=pointer]:
+              - /url: /en/artists/djdavoodi
+              - img "Davoodi" [ref=e93]
+              - generic [ref=e95]: Davoodi
+            - link "RAYZEN RAYZEN" [ref=e96] [cursor=pointer]:
+              - /url: /en/artists/rayzen-rayzen-661612544
+              - img "RAYZEN" [ref=e97]
+              - generic [ref=e98]:
+                - generic [ref=e99]: RAYZEN
+                - img [ref=e101]
+            - link "STV STV" [ref=e103] [cursor=pointer]:
+              - /url: /en/artists/stv_hardcore
+              - img "STV" [ref=e104]
+              - generic [ref=e106]: STV
+            - link "RDØ RDØ" [ref=e107] [cursor=pointer]:
+              - /url: /en/artists/reydo_uptempo
+              - img "RDØ" [ref=e108]
+              - generic [ref=e109]:
+                - generic [ref=e110]: RDØ
+                - img [ref=e112]
+            - link "X-PENSE X-PENSE" [ref=e114] [cursor=pointer]:
+              - /url: /en/artists/user-646806102
+              - img "X-PENSE" [ref=e115]
+              - generic [ref=e117]: X-PENSE
+            - link "REVEDGE REVEDGE" [ref=e118] [cursor=pointer]:
+              - /url: /en/artists/nathancarpreau52
+              - img "REVEDGE" [ref=e119]
+              - generic [ref=e121]: REVEDGE
+            - link "Invictus Invictus" [ref=e122] [cursor=pointer]:
+              - /url: /en/artists/invictus-21
+              - img "Invictus" [ref=e123]
+              - generic [ref=e125]: Invictus
+            - link "★Yoshiko★ ★Yoshiko★" [ref=e126] [cursor=pointer]:
+              - /url: /en/artists/officialyoshiko
+              - img "★Yoshiko★" [ref=e127]
+              - generic [ref=e129]: ★Yoshiko★
+            - link "Dr. Peacock Dr. Peacock" [ref=e130] [cursor=pointer]:
+              - /url: /en/artists/dr_peacock
+              - img "Dr. Peacock" [ref=e131]
+              - generic [ref=e133]: Dr. Peacock
+            - link "Dither Dither" [ref=e134] [cursor=pointer]:
+              - /url: /en/artists/ditherproductions
+              - img "Dither" [ref=e135]
+              - generic [ref=e137]: Dither
+            - link "LunaKorpz LunaKorpz" [ref=e138] [cursor=pointer]:
+              - /url: /en/artists/lunakorpz
+              - img "LunaKorpz" [ref=e139]
+              - generic [ref=e141]: LunaKorpz
+            - link "Act of Rage Act of Rage" [ref=e142] [cursor=pointer]:
+              - /url: /en/artists/act-of-rage
+              - img "Act of Rage" [ref=e143]
+              - generic [ref=e145]: Act of Rage
+            - link "HardDriverMusic HardDriverMusic" [ref=e146] [cursor=pointer]:
+              - /url: /en/artists/harddrivermusic
+              - img "HardDriverMusic" [ref=e147]
+              - generic [ref=e149]: HardDriverMusic
+            - link "Krowdexx Krowdexx" [ref=e150] [cursor=pointer]:
+              - /url: /en/artists/krowdexx_official
+              - img "Krowdexx" [ref=e151]
+              - generic [ref=e153]: Krowdexx
+            - link "TOZA TOZA" [ref=e154] [cursor=pointer]:
+              - /url: /en/artists/dj_toza
+              - img "TOZA" [ref=e155]
+              - generic [ref=e157]: TOZA
+            - link "Guizcore ✡☣✡ Guizcore ✡☣✡" [ref=e158] [cursor=pointer]:
+              - /url: /en/artists/guizcore
+              - img "Guizcore ✡☣✡" [ref=e159]
+              - generic [ref=e161]: Guizcore ✡☣✡
+            - link "DRS_official DRS_official" [ref=e162] [cursor=pointer]:
+              - /url: /en/artists/dj-darkressive-system
+              - img "DRS_official" [ref=e163]
+              - generic [ref=e165]: DRS_official
+            - link "Lekkerfaces Lekkerfaces" [ref=e166] [cursor=pointer]:
+              - /url: /en/artists/lekkerfaces
+              - img "Lekkerfaces" [ref=e167]
+              - generic [ref=e169]: Lekkerfaces
+            - link "sandywarez sandywarez" [ref=e170] [cursor=pointer]:
+              - /url: /en/artists/sandywarez
+              - img "sandywarez" [ref=e171]
+              - generic [ref=e173]: sandywarez
+            - link "Billx Billx" [ref=e174] [cursor=pointer]:
+              - /url: /en/artists/billx
+              - img "Billx" [ref=e175]
+              - generic [ref=e177]: Billx
+            - link "Immortal Immortal" [ref=e178] [cursor=pointer]:
+              - /url: /en/artists/the_immortal_uptempo
+              - img "Immortal" [ref=e179]
+              - generic [ref=e181]: Immortal
+            - link "F. Noize F. Noize" [ref=e182] [cursor=pointer]:
+              - /url: /en/artists/f-noize
+              - img "F. Noize" [ref=e183]
+              - generic [ref=e185]: F. Noize
+            - link "Promo Promo" [ref=e186] [cursor=pointer]:
+              - /url: /en/artists/djpromonl
+              - img "Promo" [ref=e187]
+              - generic [ref=e189]: Promo
+            - link "DJPanicNL DJPanicNL" [ref=e190] [cursor=pointer]:
+              - /url: /en/artists/djpanicnl
+              - img "DJPanicNL" [ref=e191]
+              - generic [ref=e193]: DJPanicNL
+            - link "D-Fence D-Fence" [ref=e194] [cursor=pointer]:
+              - /url: /en/artists/dfencenl
+              - img "D-Fence" [ref=e195]
+              - generic [ref=e197]: D-Fence
+            - link "Juliëx Juliëx" [ref=e198] [cursor=pointer]:
+              - /url: /en/artists/juliex-music
+              - img "Juliëx" [ref=e199]
+              - generic [ref=e201]: Juliëx
+            - link "Sakyra Sakyra" [ref=e202] [cursor=pointer]:
+              - /url: /en/artists/djsakyra
+              - img "Sakyra" [ref=e203]
+              - generic [ref=e205]: Sakyra
+            - link "Dark Phoenix Dark Phoenix" [ref=e206] [cursor=pointer]:
+              - /url: /en/artists/djdarkphoenix
+              - img "Dark Phoenix" [ref=e207]
+              - generic [ref=e209]: Dark Phoenix
+            - link "VERNEX VERNEX" [ref=e210] [cursor=pointer]:
+              - /url: /en/artists/djvernex
+              - img "VERNEX" [ref=e211]
+              - generic [ref=e212]:
+                - generic [ref=e213]: VERNEX
+                - img [ref=e215]
+            - link "Toxic Twins Toxic Twins" [ref=e217] [cursor=pointer]:
+              - /url: /en/artists/toxictwinsakapatatek
+              - img "Toxic Twins" [ref=e218]
+              - generic [ref=e219]:
+                - generic [ref=e220]: Toxic Twins
+                - img [ref=e222]
+            - link "Ronald-V Ronald-V" [ref=e224] [cursor=pointer]:
+              - /url: /en/artists/ronald-v
+              - img "Ronald-V" [ref=e225]
+              - generic [ref=e227]: Ronald-V
+            - link "Macby Macby" [ref=e228] [cursor=pointer]:
+              - /url: /en/artists/dj-macby
+              - img "Macby" [ref=e229]
+              - generic [ref=e231]: Macby
+            - link "Rejecta Rejecta" [ref=e232] [cursor=pointer]:
+              - /url: /en/artists/rejectaofficial
+              - img "Rejecta" [ref=e233]
+              - generic [ref=e235]: Rejecta
+            - link "Dj Adaro Dj Adaro" [ref=e236] [cursor=pointer]:
+              - /url: /en/artists/djadaro
+              - img "Dj Adaro" [ref=e237]
+              - generic [ref=e239]: Dj Adaro
+            - link "Bassbrain Bassbrain" [ref=e240] [cursor=pointer]:
+              - /url: /en/artists/bassbrainofficial
+              - img "Bassbrain" [ref=e241]
+              - generic [ref=e243]: Bassbrain
+            - link "INSUSPECT INSUSPECT" [ref=e244] [cursor=pointer]:
+              - /url: /en/artists/insuspect
+              - img "INSUSPECT" [ref=e245]
+              - generic [ref=e247]: INSUSPECT
+            - link "KENAI KENAI" [ref=e248] [cursor=pointer]:
+              - /url: /en/artists/kenairaw
+              - img "KENAI" [ref=e249]
+              - generic [ref=e251]: KENAI
+            - link "Killshot Killshot" [ref=e252] [cursor=pointer]:
+              - /url: /en/artists/killshotofficialdj
+              - img "Killshot" [ref=e253]
+              - generic [ref=e255]: Killshot
+            - link "Malice Malice" [ref=e256] [cursor=pointer]:
+              - /url: /en/artists/malice_dj
+              - img "Malice" [ref=e257]
+              - generic [ref=e259]: Malice
+            - link "MISS PEPPER 🌶 MISS PEPPER 🌶" [ref=e260] [cursor=pointer]:
+              - /url: /en/artists/miss-pepper-12
+              - img "MISS PEPPER 🌶" [ref=e261]
+              - generic [ref=e263]: MISS PEPPER 🌶
+            - link "Teka B Teka B" [ref=e264] [cursor=pointer]:
+              - /url: /en/artists/tekab
+              - img "Teka B" [ref=e265]
+              - generic [ref=e267]: Teka B
+            - link "Ruthless Ruthless" [ref=e268] [cursor=pointer]:
+              - /url: /en/artists/ruthlessnl
+              - img "Ruthless" [ref=e269]
+              - generic [ref=e271]: Ruthless
+            - link "Potato Potato" [ref=e272] [cursor=pointer]:
+              - /url: /en/artists/deejaypotato
+              - img "Potato" [ref=e273]
+              - generic [ref=e275]: Potato
+            - link "Tha Playah Tha Playah" [ref=e276] [cursor=pointer]:
+              - /url: /en/artists/djthaplayah
+              - img "Tha Playah" [ref=e277]
+              - generic [ref=e279]: Tha Playah
+            - link "The Saints The Saints" [ref=e280] [cursor=pointer]:
+              - /url: /en/artists/the-saints-217883827
+              - img "The Saints" [ref=e281]
+              - generic [ref=e283]: The Saints
+        - generic [ref=e284]:
+          - generic [ref=e285]: Organized By
+          - generic [ref=e286]:
+            - link "ENERGY Festival ENERGY Festival 1,133 followers 2 events" [ref=e287] [cursor=pointer]:
+              - /url: /en/venues/energy-festival
+              - img "ENERGY Festival" [ref=e289]
+              - generic [ref=e290]:
+                - generic [ref=e291]: ENERGY Festival
+                - generic [ref=e292]: 1,133 followers
+                - generic [ref=e293]: 2 events
+            - button "Follow" [ref=e294] [cursor=pointer]:
+              - button "Follow" [ref=e295]
+        - generic [ref=e296]:
+          - generic [ref=e297]: Mood
+          - generic [ref=e298]:
+            - link "Hardcore" [ref=e299] [cursor=pointer]:
+              - /url: /en/festivals/-/europe/belgium/hard-music
+            - link "Hardstyle" [ref=e300] [cursor=pointer]:
+              - /url: /en/festivals/-/europe/belgium/hard-music
+        - generic [ref=e301]:
+          - generic [ref=e302]: Location
+          - generic [ref=e303]:
+            - img [ref=e304]
+            - link "Lotto Mons Expo" [ref=e306] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/Lotto%20Mons%20Expo%2C%20Avenue%20Thomas%20Edison%202%2C%207000%20Mons%2C%20Belgique/@50.4582252,3.9375856,17z
+          - generic [ref=e307]:
+            - img [ref=e308]
+            - link "Avenue Thomas Edison 2, 7000 Mons, Belgique" [ref=e310] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/Lotto%20Mons%20Expo%2C%20Avenue%20Thomas%20Edison%202%2C%207000%20Mons%2C%20Belgique/@50.4582252,3.9375856,17z
+          - link "Google map" [ref=e311] [cursor=pointer]:
+            - /url: https://www.google.com/maps/search/Lotto%20Mons%20Expo%2C%20Avenue%20Thomas%20Edison%202%2C%207000%20Mons%2C%20Belgique/@50.4582252,3.9375856,17z
+            - img "Google map" [ref=e312]
+    - navigation [ref=e313]:
+      - generic [ref=e314]:
+        - generic [ref=e316]:
+          - link "Home" [ref=e317] [cursor=pointer]:
+            - /url: /en
+            - img [ref=e318]
+          - link "List your event" [ref=e320] [cursor=pointer]:
+            - /url: https://smartboard.shotgun.live/?utm_source=b2c_website&utm_campaign=footer
+            - text: List your event
+            - img [ref=e321]
+        - generic [ref=e323]:
+          - generic [ref=e324]:
+            - heading "About" [level=3] [ref=e325]
+            - list [ref=e326]:
+              - listitem [ref=e327]:
+                - link "I'm an organizer" [ref=e328] [cursor=pointer]:
+                  - /url: https://pro.shotgun.live/
+              - listitem [ref=e329]:
+                - link "Shotgun for Artists" [ref=e330] [cursor=pointer]:
+                  - /url: https://artist.shotgun.live/
+              - listitem [ref=e331]:
+                - link "Press kit" [ref=e332] [cursor=pointer]:
+                  - /url: https://drive.google.com/drive/folders/1ulymAwQQBbB1pb_wdUbg0cv_ljxcptp4
+              - listitem [ref=e333]:
+                - link "We're hiring 🦄" [ref=e334] [cursor=pointer]:
+                  - /url: https://shotgun.teamtailor.com/
+              - listitem [ref=e335]:
+                - link "Artists" [ref=e336] [cursor=pointer]:
+                  - /url: /en/artists
+              - listitem [ref=e337]:
+                - link "Concerts" [ref=e338] [cursor=pointer]:
+                  - /url: /en/concerts
+          - generic [ref=e339]:
+            - heading "Popular cities" [level=3] [ref=e340]
+            - list [ref=e341]:
+              - listitem [ref=e342]:
+                - link "New York" [ref=e343] [cursor=pointer]:
+                  - /url: /en/cities/new-york
+              - listitem [ref=e344]:
+                - link "Washington DC" [ref=e345] [cursor=pointer]:
+                  - /url: /en/cities/washington-dc
+              - listitem [ref=e346]:
+                - link "Atlanta" [ref=e347] [cursor=pointer]:
+                  - /url: /en/cities/atlanta
+              - listitem [ref=e348]:
+                - link "Miami" [ref=e349] [cursor=pointer]:
+                  - /url: /en/cities/miami
+              - listitem [ref=e350]:
+                - link "Los Angeles" [ref=e351] [cursor=pointer]:
+                  - /url: /en/cities/los-angeles
+              - listitem [ref=e352]:
+                - link "View all" [ref=e353] [cursor=pointer]:
+                  - /url: /en/cities
+          - generic [ref=e354]:
+            - heading "Support" [level=3] [ref=e355]
+            - list [ref=e356]:
+              - listitem [ref=e357]:
+                - link "Help center" [ref=e358] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc?utm_source=shotgun-web
+              - listitem [ref=e359]:
+                - link "Contact us" [ref=e360] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc/requests/new?utm_source=shotgun-web
+              - listitem [ref=e361]:
+                - link "Report content" [ref=e362] [cursor=pointer]:
+                  - /url: https://support.shotgun.live/hc/articles/28403164081682--Report-Illegal-Content
+        - generic [ref=e363]:
+          - generic [ref=e364]:
+            - heading "Join the community" [level=3] [ref=e365]
+            - generic [ref=e366]:
+              - link "App Store" [ref=e367] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/shotgun/id760028892
+                - img [ref=e368]
+                - text: App Store
+              - link "Play Store" [ref=e370] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.shotguntheapp.android
+                - img [ref=e371]
+                - text: Play Store
+          - generic [ref=e373]:
+            - heading "We are social :)" [level=3] [ref=e374]
+            - generic [ref=e375]:
+              - link "TikTok" [ref=e376] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@shotgun.usa
+                - img [ref=e377]
+                - generic [ref=e379]: TikTok
+              - link "Instagram" [ref=e380] [cursor=pointer]:
+                - /url: https://www.instagram.com/shotgun.usa
+                - img [ref=e381]
+                - generic [ref=e383]: Instagram
+              - link "Spotify" [ref=e384] [cursor=pointer]:
+                - /url: https://open.spotify.com/user/bcyeq541kbgzp0yhd949c3yk9
+                - img [ref=e385]
+                - generic [ref=e387]: Spotify
+              - link "LinkedIn" [ref=e388] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/shotgun-
+                - img [ref=e389]
+                - generic [ref=e391]: LinkedIn
+        - generic [ref=e393]:
+          - generic [ref=e394]:
+            - link "Terms and conditions" [ref=e395] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330476029330?utm_source=shotgun-web
+            - link "Privacy policy" [ref=e396] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330537455762?utm_source=shotgun-web
+            - link "Consumer information" [ref=e397] [cursor=pointer]:
+              - /url: https://support.shotgun.live/hc/articles/14330504165650?utm_source=shotgun-web
+            - generic [ref=e398] [cursor=pointer]: Cookies policy
+            - link "Partners" [ref=e399] [cursor=pointer]:
+              - /url: /en/partners-cookies
+          - generic [ref=e400]:
+            - generic [ref=e401]: English
+            - img [ref=e402]
+            - combobox "Select language" [ref=e404] [cursor=pointer]:
+              - option "English" [selected]
+              - option "Français"
+              - option "Español"
+              - option "Português (Brasil)"
+              - option "Português Europeu"
+        - generic [ref=e405]: © 2026 Shotgun SAS. All rights reserved.
+        - generic [ref=e406]:
+          - text: This site is protected by reCAPTCHA and the Google
+          - link "Privacy Policy" [ref=e407] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy
+          - text: and
+          - link "Terms of Service" [ref=e408] [cursor=pointer]:
+            - /url: https://policies.google.com/terms
+          - text: apply.
+  - region "Notifications alt+T"
+  - alert [ref=e409]
