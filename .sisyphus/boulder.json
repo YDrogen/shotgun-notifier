@@ -1,0 +1,12 @@
+{
+  "active_plan": "/Users/ydrogen/Workspace/lab/shotgun-notif/.sisyphus/plans/shotgun-notif.md",
+  "started_at": "2026-06-07T20:40:12.415Z",
+  "session_ids": [
+    "ses_15c3b1db1ffehV77hBJpwiq6O4"
+  ],
+  "session_origins": {
+    "ses_15c3b1db1ffehV77hBJpwiq6O4": "direct"
+  },
+  "plan_name": "shotgun-notif",
+  "agent": "atlas"
+}
