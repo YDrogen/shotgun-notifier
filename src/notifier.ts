@@ -34,7 +34,7 @@ export async function sendNotification(
     color: status.state === 'available' ? 3066993 : 15105570,
   };
 
-  const body = JSON.stringify({ embeds: [embed] });
+  const body = JSON.stringify({ content: '<@200668930790916096>', embeds: [embed] });
 
   try {
     const response = await fetch(webhookUrl, {
@@ -82,7 +82,7 @@ export async function sendUnhealthyAlert(
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ embeds: [embed] }),
+      body: JSON.stringify({ content: '<@200668930790916096>', embeds: [embed] }),
     });
 
     if (response.status === 204 || response.status === 200) {
