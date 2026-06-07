@@ -18,6 +18,15 @@
       "agent": "Sisyphus-Junior",
       "category": "quick",
       "updated_at": "2026-06-07T20:43:29.296Z"
+    },
+    "todo:4": {
+      "task_key": "todo:4",
+      "task_label": "4",
+      "task_title": "Playwright validation gate",
+      "session_id": "ses_15c2977abffeZnC3Oz62us3pIq",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-06-07T20:49:12.296Z"
     }
   }
 }

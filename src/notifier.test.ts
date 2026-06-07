@@ -1,10 +1,22 @@
 import { describe, it, expect, beforeEach, afterEach } from 'bun:test';
 import { sendNotification, sendUnhealthyAlert, validateWebhookUrl } from './notifier.ts';
+import type { EventConfig, EventStatus, TicketCategory } from './types.ts';
 
 const TEST_WEBHOOK = 'https://discord.com/api/webhooks/test/webhook';
-const TEST_EVENT = { name: 'Test Event', url: 'https://example.com/event' };
-const TEST_STATUS = { state: 'Available', categories: { Price: '$50', Section: 'A1' } };
-const TEST_EVENT_WITH_CATS = { name: 'Test Event', url: 'https://example.com/event', categories: ['Price', 'Section'] };
+const TEST_EVENT: EventConfig = { name: 'Test Event', url: 'https://example.com/event' };
+
+const TEST_CATEGORIES: TicketCategory[] = [
+  { name: 'Price', status: 'available', price: '$50' },
+  { name: 'Section', status: 'available', price: 'A1' },
+];
+
+const TEST_STATUS: EventStatus = {
+  url: TEST_EVENT.url,
+  state: 'available',
+  categories: TEST_CATEGORIES,
+  lastChecked: new Date(),
+  consecutiveFailures: 0,
+};
 
 let capturedCalls: { url: string; options: RequestInit }[] = [];
 
@@ -25,7 +37,7 @@ describe('notifier', () => {
 
   describe('sendNotification', () => {
     it('sends correct embed structure to Discord webhook', async () => {
-      await sendNotification(TEST_WEBHOOK, TEST_EVENT_WITH_CATS, TEST_STATUS);
+      await sendNotification(TEST_WEBHOOK, TEST_EVENT, TEST_STATUS);
 
       expect(capturedCalls.length).toBe(1);
       expect(capturedCalls[0].url).toBe(TEST_WEBHOOK);
@@ -36,7 +48,7 @@ describe('notifier', () => {
       expect(body.embeds).toHaveLength(1);
       expect(body.embeds[0]).toMatchObject({
         title: 'Test Event',
-        description: 'Available',
+        description: 'Status: Available',
         url: 'https://example.com/event',
         fields: [
           { name: 'Price', value: '$50', inline: true },
@@ -68,7 +80,7 @@ describe('notifier', () => {
     });
 
     it('uses orange color for non-Available state', async () => {
-      await sendNotification(TEST_WEBHOOK, TEST_EVENT, { state: 'Sold Out' });
+      await sendNotification(TEST_WEBHOOK, TEST_EVENT, { ...TEST_STATUS, state: 'sold_out' });
 
       const body = JSON.parse(capturedCalls[0].options.body as string);
       expect(body.embeds[0].color).toBe(15105570);

@@ -1,15 +1,5 @@
+import type { EventConfig, EventStatus } from './types.ts';
 import logger from './logger.ts';
-
-export interface EventConfig {
-  name: string;
-  url: string;
-  categories?: string[];
-}
-
-export interface EventStatus {
-  state: string;
-  categories?: Record<string, string>;
-}
 
 interface DiscordEmbed {
   title: string;
@@ -27,19 +17,21 @@ export async function sendNotification(
 ): Promise<void> {
   const log = logger.child({ component: 'notifier' });
 
-  const fields = event.categories?.map((cat) => ({
-    name: cat,
-    value: status.categories?.[cat] ?? 'N/A',
+  const fields = status.categories.map((cat) => ({
+    name: cat.name,
+    value: cat.price ?? cat.status,
     inline: true,
-  })) ?? [];
+  }));
+
+  const stateText = status.state === 'available' ? 'Available' : status.state === 'sold_out' ? 'Sold Out' : 'Unknown';
 
   const embed: DiscordEmbed = {
     title: event.name,
-    description: status.state,
+    description: `Status: ${stateText}`,
     fields,
     url: event.url,
     timestamp: new Date().toISOString(),
-    color: status.state === 'Available' ? 3066993 : 15105570,
+    color: status.state === 'available' ? 3066993 : 15105570,
   };
 
   const body = JSON.stringify({ embeds: [embed] });
