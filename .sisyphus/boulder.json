@@ -2,10 +2,18 @@
   "active_plan": "/Users/ydrogen/Workspace/lab/shotgun-notif/.sisyphus/plans/shotgun-notif.md",
   "started_at": "2026-06-07T20:40:12.415Z",
   "session_ids": [
-    "ses_15c3b1db1ffehV77hBJpwiq6O4"
+    "ses_15c3b1db1ffehV77hBJpwiq6O4",
+    "ses_15c042473ffe7c0iSIuRBJsgVE",
+    "ses_15c040c13ffemEkQKxugT7jZSF",
+    "ses_15c03e517ffeR5jrolHn9eg9m6",
+    "ses_15c03cd8cffepcp0BvtrYFrwSt"
   ],
   "session_origins": {
-    "ses_15c3b1db1ffehV77hBJpwiq6O4": "direct"
+    "ses_15c3b1db1ffehV77hBJpwiq6O4": "direct",
+    "ses_15c042473ffe7c0iSIuRBJsgVE": "appended",
+    "ses_15c040c13ffemEkQKxugT7jZSF": "appended",
+    "ses_15c03e517ffeR5jrolHn9eg9m6": "appended",
+    "ses_15c03cd8cffepcp0BvtrYFrwSt": "appended"
   },
   "plan_name": "shotgun-notif",
   "agent": "atlas",
@@ -32,10 +40,37 @@
       "task_key": "final-wave:f1",
       "task_label": "F1",
       "task_title": "**Plan Compliance Audit** — `oracle`",
-      "session_id": "ses_15c266053ffeZQrfKKIPKhJG0I",
+      "session_id": "ses_15c03cd8cffepcp0BvtrYFrwSt",
       "agent": "Sisyphus-Junior",
       "category": "deep",
-      "updated_at": "2026-06-07T20:59:35.268Z"
+      "updated_at": "2026-06-07T21:30:18.108Z"
+    },
+    "todo:6": {
+      "task_key": "todo:6",
+      "task_label": "6",
+      "task_title": "Scraper module",
+      "session_id": "ses_15c1b77edffeZeNLpK6SoVXsOT",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-06-07T21:04:26.615Z"
+    },
+    "todo:7": {
+      "task_key": "todo:7",
+      "task_label": "7",
+      "task_title": "Orchestrator (poll loop + backoff + browser lifecycle)",
+      "session_id": "ses_15c0e13abffeyO4RCooAKkTIUU",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-06-07T21:21:33.760Z"
+    },
+    "todo:8": {
+      "task_key": "todo:8",
+      "task_label": "8",
+      "task_title": "CLI entry point + graceful shutdown + integration testing",
+      "session_id": "ses_15c06cf74ffe986BobR4CsgTIe",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-06-07T21:26:53.526Z"
     }
   }
 }
