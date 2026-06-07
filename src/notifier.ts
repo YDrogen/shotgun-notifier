@@ -103,12 +103,7 @@ export async function sendUnhealthyAlert(
 
 export async function validateWebhookUrl(url: string): Promise<boolean> {
   try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ content: ' ' }),
-    });
-
+    const response = await fetch(url, { method: 'GET' });
     return response.status === 200 || response.status === 204;
   } catch {
     return false;
