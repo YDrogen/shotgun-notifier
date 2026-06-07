@@ -14,6 +14,7 @@ export async function sendNotification(
   webhookUrl: string,
   event: EventConfig,
   status: EventStatus,
+  userId?: string,
 ): Promise<void> {
   const log = logger.child({ component: 'notifier' });
 
@@ -34,13 +35,16 @@ export async function sendNotification(
     color: status.state === 'available' ? 3066993 : 15105570,
   };
 
-  const body = JSON.stringify({ content: '<@200668930790916096>', embeds: [embed] });
+  const body: Record<string, unknown> = { embeds: [embed] };
+  if (userId) {
+    body.content = `<@${userId}>`;
+  }
 
   try {
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body,
+      body: JSON.stringify(body),
     });
 
     if (response.status === 204 || response.status === 200) {
@@ -66,6 +70,7 @@ export async function sendUnhealthyAlert(
   webhookUrl: string,
   event: EventConfig,
   failureCount: number,
+  userId?: string,
 ): Promise<void> {
   const log = logger.child({ component: 'notifier' });
 
@@ -78,11 +83,16 @@ export async function sendUnhealthyAlert(
     color: 15158332,
   };
 
+  const body: Record<string, unknown> = { embeds: [embed] };
+  if (userId) {
+    body.content = `<@${userId}>`;
+  }
+
   try {
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ content: '<@200668930790916096>', embeds: [embed] }),
+      body: JSON.stringify(body),
     });
 
     if (response.status === 204 || response.status === 200) {

@@ -10,6 +10,7 @@ export const eventConfigSchema = z.object({
 export const configSchema = z.object({
   events: z.array(eventConfigSchema).min(1),
   discordWebhookUrl: z.string().url(),
+  discordUserId: z.string().optional(),
   pollIntervalMs: z.number().int().min(30000).default(60000),
 });
 

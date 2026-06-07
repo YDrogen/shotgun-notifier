@@ -118,7 +118,7 @@ async function runPoll(config: Config, deps: Required<Dependencies>, log: Return
       if (tracker.isUnhealthy(event.url)) {
         eventLog.error({ consecutiveFailures }, 'Event is unhealthy');
         try {
-          await deps.sendUnhealthyAlert(config.discordWebhookUrl, event, consecutiveFailures);
+          await deps.sendUnhealthyAlert(config.discordWebhookUrl, event, consecutiveFailures, config.discordUserId);
           eventLog.info('Unhealthy alert sent');
         } catch (err) {
           eventLog.error({ error: err instanceof Error ? err.message : String(err) }, 'Failed to send unhealthy alert');
@@ -149,7 +149,7 @@ async function runPoll(config: Config, deps: Required<Dependencies>, log: Return
 
       for (const change of changes) {
         try {
-          await deps.sendNotification(config.discordWebhookUrl, event, status);
+          await deps.sendNotification(config.discordWebhookUrl, event, status, config.discordUserId);
           eventLog.info('Notification sent');
         } catch (err) {
           eventLog.error({ error: err instanceof Error ? err.message : String(err) }, 'Failed to send notification');

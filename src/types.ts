@@ -37,6 +37,7 @@ export interface EventConfig {
 export interface Config {
   events: EventConfig[];
   discordWebhookUrl: string;
+  discordUserId?: string;
   pollIntervalMs: number;
 }
 

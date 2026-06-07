@@ -10,5 +10,6 @@
     }
   ],
   "discordWebhookUrl": "https://discord.com/api/webhooks/123456789/placeholder-webhook-url",
+  "discordUserId": "200668930790916096",
   "pollIntervalMs": 60000
 }
