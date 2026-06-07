@@ -4,6 +4,7 @@ import { sendNotification, sendUnhealthyAlert, validateWebhookUrl } from './noti
 const TEST_WEBHOOK = 'https://discord.com/api/webhooks/test/webhook';
 const TEST_EVENT = { name: 'Test Event', url: 'https://example.com/event' };
 const TEST_STATUS = { state: 'Available', categories: { Price: '$50', Section: 'A1' } };
+const TEST_EVENT_WITH_CATS = { name: 'Test Event', url: 'https://example.com/event', categories: ['Price', 'Section'] };
 
 let capturedCalls: { url: string; options: RequestInit }[] = [];
 
@@ -24,12 +25,7 @@ describe('notifier', () => {
 
   describe('sendNotification', () => {
     it('sends correct embed structure to Discord webhook', async () => {
-      globalThis.fetch = async (url: string, options: RequestInit) => {
-        capturedCalls.push({ url: url as string, options });
-        return new Response('', { status: 204 });
-      };
-
-      await sendNotification(TEST_WEBHOOK, TEST_EVENT, TEST_STATUS);
+      await sendNotification(TEST_WEBHOOK, TEST_EVENT_WITH_CATS, TEST_STATUS);
 
       expect(capturedCalls.length).toBe(1);
       expect(capturedCalls[0].url).toBe(TEST_WEBHOOK);
@@ -65,11 +61,6 @@ describe('notifier', () => {
     });
 
     it('uses green color for Available state', async () => {
-      globalThis.fetch = async (url: string, options: RequestInit) => {
-        capturedCalls.push({ url: url as string, options });
-        return new Response('', { status: 204 });
-      };
-
       await sendNotification(TEST_WEBHOOK, TEST_EVENT, TEST_STATUS);
 
       const body = JSON.parse(capturedCalls[0].options.body as string);
@@ -77,11 +68,6 @@ describe('notifier', () => {
     });
 
     it('uses orange color for non-Available state', async () => {
-      globalThis.fetch = async (url: string, options: RequestInit) => {
-        capturedCalls.push({ url: url as string, options });
-        return new Response('', { status: 204 });
-      };
-
       await sendNotification(TEST_WEBHOOK, TEST_EVENT, { state: 'Sold Out' });
 
       const body = JSON.parse(capturedCalls[0].options.body as string);
@@ -91,11 +77,6 @@ describe('notifier', () => {
 
   describe('sendUnhealthyAlert', () => {
     it('sends warning embed with failure count', async () => {
-      globalThis.fetch = async (url: string, options: RequestInit) => {
-        capturedCalls.push({ url: url as string, options });
-        return new Response('', { status: 204 });
-      };
-
       await sendUnhealthyAlert(TEST_WEBHOOK, TEST_EVENT, 5);
 
       const body = JSON.parse(capturedCalls[0].options.body as string);
