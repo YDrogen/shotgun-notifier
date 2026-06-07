@@ -1,0 +1,12 @@
+node_modules
+.git
+.gitignore
+.sisyphus
+*.test.ts
+test-config.json
+evidence/
+.playwright-mcp/
+Dockerfile
+docker-compose.yml
+.dockerignore
+README.md

@@ -1,0 +1,14 @@
+services:
+  shotgun-notif:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shotgun-notif
+    volumes:
+      - ./config.json:/app/config.json:ro
+    restart: unless-stopped
+    init: true
+    environment:
+      - NODE_ENV=production
+    stop_signal: SIGTERM
+    stop_grace_period: 30s
